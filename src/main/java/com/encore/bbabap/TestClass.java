@@ -9,4 +9,8 @@ public class TestClass {
     public String hello(){
         return "Hello Spring";
     }
+    @GetMapping("/zzimni")
+    public String zzimniTest(){
+        return "Hello Spring I'm zzimni";
+    }
 }
