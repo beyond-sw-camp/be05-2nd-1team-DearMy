@@ -10,6 +10,15 @@ public class TestClass {
         return "Hello Spring";
     }
 
+    @GetMapping("/zzimni")
+    public String zzimniTest(){
+        return "Hello Spring I'm zzimni";
+    }
+    @GetMapping("/zzimni2")
+    public String zzimniTest2() {
+        return "Hello Spring I'm zzimni2";
+    }
+
     @GetMapping("/hello2")
     public String hello2() {
         return "Hello Spring";
@@ -33,5 +42,6 @@ public class TestClass {
     @GetMapping("/hello6")
     public String hello6() {
         return "Hello Spring";
+
     }
 }
