@@ -24,4 +24,9 @@ public class TestClass {
     public String hello4(){
         return "Hello Spring";
     }
+
+    @GetMapping("/hello5")
+    public String hello5() {
+        return "Hello Spring";
+    }
 }
