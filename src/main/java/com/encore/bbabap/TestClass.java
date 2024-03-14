@@ -19,4 +19,9 @@ public class TestClass {
     public String hello3(){
         return "Hello Spring";
     }
+
+    @GetMapping("/hello4")
+    public String hello4(){
+        return "Hello Spring";
+    }
 }
