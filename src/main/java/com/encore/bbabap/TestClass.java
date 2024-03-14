@@ -13,4 +13,8 @@ public class TestClass {
     public String zzimniTest(){
         return "Hello Spring I'm zzimni";
     }
+    @GetMapping("/zzimni2")
+    public String zzimniTest2(){
+        return "Hello Spring I'm zzimni2";
+    }
 }
