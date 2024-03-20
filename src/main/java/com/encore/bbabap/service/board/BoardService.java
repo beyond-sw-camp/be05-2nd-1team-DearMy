@@ -6,7 +6,7 @@ import com.encore.bbabap.api.board.response.BoardResponseDTO;
 import com.encore.bbabap.domain.board.Board;
 import com.encore.bbabap.domain.user.User;
 import com.encore.bbabap.domain.user.UserStatus;
-import com.encore.bbabap.repository.user.BoardRepository;
+import com.encore.bbabap.repository.board.BoardRepository;
 import com.encore.bbabap.repository.user.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -33,7 +33,7 @@ public class BoardService {
         boardRepository.save(board);
 
         BoardResponseDTO responseDTO = new BoardResponseDTO();
-        responseDTO.setUserId(user.getUserId());
+        responseDTO.setEmail(user.getEmail());
         responseDTO.setMessage("게시판 등록이 성공적으로 완료되었습니다.");
         return responseDTO;
     }
