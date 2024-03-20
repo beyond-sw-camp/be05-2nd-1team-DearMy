@@ -1,6 +1,7 @@
 package com.encore.bbabap.domain.board;
 
 import com.encore.bbabap.domain.user.User;
+import com.encore.bbabap.domain.user.UserStatus;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
