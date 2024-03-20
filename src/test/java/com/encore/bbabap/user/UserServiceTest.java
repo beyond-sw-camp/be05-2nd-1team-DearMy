@@ -1,16 +1,17 @@
 package com.encore.bbabap.user;
 
-import static org.junit.jupiter.api.Assertions.assertAll;
-import static org.junit.jupiter.api.Assertions.assertNotEquals;
-
-import java.util.List;
-import me.dongwook.demo10.domain.enums.CarType;
-import me.dongwook.demo10.domain.user.User;
+import com.encore.bbabap.domain.enums.CarType;
+import com.encore.bbabap.domain.user.User;
+import com.encore.bbabap.service.user.UserService;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.security.crypto.password.PasswordEncoder;
+
+import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 class UserServiceTest {

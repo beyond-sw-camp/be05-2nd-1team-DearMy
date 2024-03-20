@@ -1,12 +1,14 @@
 package com.encore.bbabap.user;
 
-import static org.assertj.core.api.Assertions.assertThat;
-
-import java.time.LocalDateTime;
-import me.dongwook.demo10.api.user.request.UserUpdateRequest;
-import me.dongwook.demo10.domain.enums.CarType;
+import com.encore.bbabap.api.user.request.UserUpdateRequest;
+import com.encore.bbabap.domain.user.User;
+import com.encore.bbabap.domain.enums.CarType;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+
+import java.time.LocalDateTime;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 class UserTest {
 
