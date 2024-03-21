@@ -1,5 +1,6 @@
 package com.encore.bbabap.service.board;
 
+
 import com.encore.bbabap.api.board.request.BoardRequestDTO;
 import com.encore.bbabap.api.board.response.BoardResponseDTO;
 import com.encore.bbabap.domain.board.Board;
@@ -72,9 +73,24 @@ public class BoardService {
         return convertToDTO(board);
     }
 
+//    @Transactional
+//    public void deleteBoard(Long id) {
+//        boardRepository.deleteById(id);
+//    }
+
     @Transactional
     public void deleteBoard(Long id) {
-        boardRepository.deleteById(id);
+        Board board = boardRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Board not found with id: " + id));
+
+        // 삭제 여부 플래그 설정
+        board.setDeletedYn(true);
+
+        // 삭제 시간 설정
+        board.setDeletedAt(LocalDateTime.now());
+
+        // 실제로 데이터를 삭제하는 경우
+        // boardRepository.delete(board);
     }
 
     private BoardResponseDTO convertToDTO(Board board) {
