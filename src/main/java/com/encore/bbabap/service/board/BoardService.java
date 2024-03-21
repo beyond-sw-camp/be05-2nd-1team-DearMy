@@ -8,6 +8,8 @@ import com.encore.bbabap.domain.user.User;
 import com.encore.bbabap.repository.board.BoardRepository;
 import com.encore.bbabap.repository.user.UserRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -24,10 +26,28 @@ public class BoardService {
 
     @Transactional
     public BoardResponseDTO createBoard(BoardRequestDTO requestDTO) {
-        User user = userRepository.findByEmail(requestDTO.getEmail());
-        if (user == null) {
-            throw new RuntimeException("User not found with email: " + requestDTO.getEmail());
+
+        // 사용자 인증 정보 가져오기
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+
+        // 사용자가 인증되었는지 확인
+        if (authentication == null || !authentication.isAuthenticated()) {
+            throw new RuntimeException("User authentication failed");
         }
+
+        // 사용자의 이메일 가져오기
+        String userEmail = authentication.getName();
+
+        // 이메일을 사용하여 사용자 정보 가져오기
+        User user = userRepository.findByEmail(userEmail);
+        if (user == null) {
+            throw new RuntimeException("User not found with email: " + userEmail);
+        }
+
+//        User user = userRepository.findByEmail(requestDTO.getEmail());
+//        if (user == null) {
+//            throw new RuntimeException("User not found with email: " + requestDTO.getEmail());
+//        }
 
 //        Board board = new Board();
 //        board.setTitle(requestDTO.getTitle());
