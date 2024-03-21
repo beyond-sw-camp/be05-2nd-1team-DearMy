@@ -3,13 +3,12 @@ package com.encore.bbabap.service.board;
 
 import com.encore.bbabap.api.board.request.BoardRequestDTO;
 import com.encore.bbabap.api.board.response.BoardResponseDTO;
+import com.encore.bbabap.config.SecurityUtils;
 import com.encore.bbabap.domain.board.Board;
 import com.encore.bbabap.domain.user.User;
 import com.encore.bbabap.repository.board.BoardRepository;
 import com.encore.bbabap.repository.user.UserRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -23,16 +22,6 @@ public class BoardService {
 
     private final BoardRepository boardRepository;
     private final UserRepository userRepository;
-
-    // 현재 사용자의 이메일 가져오는 메서드
-    private String getCurrentUserEmail() {
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        if (authentication != null && authentication.isAuthenticated()) {
-            return authentication.getName();
-        } else {
-            throw new RuntimeException("User authentication failed");
-        }
-    }
 
     @Transactional
     public BoardResponseDTO createBoard(BoardRequestDTO requestDTO) {
@@ -49,7 +38,7 @@ public class BoardService {
 //        String userEmail = authentication.getName();
 
         // 현재 사용자의 이메일 가져오기
-        String userEmail = getCurrentUserEmail();
+        String userEmail = SecurityUtils.getCurrentUserEmail();
 
         // 이메일을 사용하여 사용자 정보 가져오기
         User user = userRepository.findByEmail(userEmail);
@@ -103,7 +92,7 @@ public class BoardService {
                 .orElseThrow(() -> new RuntimeException("Board not found with id: " + id));
 
         // 현재 사용자의 이메일 가져오기
-        String currentUserEmail = getCurrentUserEmail();
+        String currentUserEmail = SecurityUtils.getCurrentUserEmail();
 
         // 게시물을 작성한 사용자의 이메일 가져오기
         String authorEmail = board.getUser().getEmail();
@@ -130,7 +119,7 @@ public class BoardService {
 //        Board board = boardRepository.findById(id)
 //                .orElseThrow(() -> new RuntimeException("Board not found with id: " + id));
 
-        String currentUserEmail = getCurrentUserEmail(); // 사용자의 이메일 가져오기
+        String currentUserEmail = SecurityUtils.getCurrentUserEmail(); // 사용자의 이메일 가져오기
 
         Board board = boardRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Board not found with id: " + id));
