@@ -1,9 +1,10 @@
-package com.encore.bbabap.service.Comment;
+package com.encore.bbabap.service.comment;
+
 
 import com.encore.bbabap.api.comment.request.CommentRequestDTO;
 import com.encore.bbabap.api.comment.response.CommentResponseDTO;
-import com.encore.bbabap.domain.Comment.Comment;
 import com.encore.bbabap.domain.board.Board;
+import com.encore.bbabap.domain.comment.Comment;
 import com.encore.bbabap.domain.user.User;
 import com.encore.bbabap.repository.Comment.CommentRepository;
 import com.encore.bbabap.repository.board.BoardRepository;
@@ -53,6 +54,9 @@ public class CommentService {
     public void deleteComment(Long commentId) {
         Comment comment = commentRepository.findById(commentId)
                 .orElseThrow(() -> new RuntimeException("Comment not found with id: " + commentId));
-        commentRepository.delete(comment);
+        comment.setDeletedAt(LocalDateTime.now()); // 삭제 시간 설정
+
+        // 실제로 데이터를 삭제하는 경우
+        // commentRepository.delete(comment);
     }
 }

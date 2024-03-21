@@ -1,4 +1,4 @@
-package com.encore.bbabap.domain.Comment;
+package com.encore.bbabap.domain.comment;
 
 import com.encore.bbabap.domain.board.Board;
 import com.encore.bbabap.domain.user.User;
@@ -28,6 +28,9 @@ public class Comment {
     @Column(name = "created_at")
     private LocalDateTime createdAt;
 
+    @Column(name = "deleted_at")
+    private LocalDateTime deletedAt; // 삭제 시간 추가
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "email", referencedColumnName = "email", nullable = false)
     private User user;
@@ -37,10 +40,11 @@ public class Comment {
     private Board board;
 
     @Builder
-    public Comment(Long id, String content, LocalDateTime createdAt, User user, Board board) {
+    public Comment(Long id, String content, LocalDateTime createdAt, LocalDateTime deletedAt, User user, Board board) {
         this.id = id;
         this.content = content;
         this.createdAt = createdAt;
+        this.deletedAt = deletedAt; // 삭제 시간 설정
         this.user = user;
         this.board = board;
     }

@@ -2,7 +2,7 @@ package com.encore.bbabap.api.comment;
 
 import com.encore.bbabap.api.comment.request.CommentRequestDTO;
 import com.encore.bbabap.api.comment.response.CommentResponseDTO;
-import com.encore.bbabap.service.Comment.CommentService;
+import com.encore.bbabap.service.comment.CommentService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -1,6 +1,6 @@
 package com.encore.bbabap.repository.Comment;
 
-import com.encore.bbabap.domain.Comment.Comment;
+import com.encore.bbabap.domain.comment.Comment;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
