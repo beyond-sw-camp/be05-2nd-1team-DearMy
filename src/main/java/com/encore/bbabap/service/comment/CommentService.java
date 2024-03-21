@@ -3,6 +3,7 @@ package com.encore.bbabap.service.comment;
 
 import com.encore.bbabap.api.comment.request.CommentRequestDTO;
 import com.encore.bbabap.api.comment.response.CommentResponseDTO;
+import com.encore.bbabap.config.SecurityUtils;
 import com.encore.bbabap.domain.board.Board;
 import com.encore.bbabap.domain.comment.Comment;
 import com.encore.bbabap.domain.user.User;
@@ -27,12 +28,27 @@ public class CommentService {
 
     @Transactional
     public CommentResponseDTO addComment(CommentRequestDTO requestDTO) {
+//        Board board = boardRepository.findById(requestDTO.getBoardId())
+//                .orElseThrow(() -> new RuntimeException("Board not found with id: " + requestDTO.getBoardId()));
+//
+//        User user = userRepository.findByEmail(requestDTO.getEmail());
+//        if (user == null) {
+//            throw new RuntimeException("User not found with email: " + requestDTO.getEmail());
+//        }
+
         Board board = boardRepository.findById(requestDTO.getBoardId())
                 .orElseThrow(() -> new RuntimeException("Board not found with id: " + requestDTO.getBoardId()));
 
-        User user = userRepository.findByEmail(requestDTO.getEmail());
+        String userEmail = SecurityUtils.getCurrentUserEmail(); // 현재 사용자의 이메일 가져오기
+
+        User user = userRepository.findByEmail(userEmail);
         if (user == null) {
-            throw new RuntimeException("User not found with email: " + requestDTO.getEmail());
+            throw new RuntimeException("User not found with email: " + userEmail);
+        }
+
+        // 사용자 권한 확인: 게시물 작성자만 댓글을 작성할 수 있도록
+        if (!board.getUser().getEmail().equals(userEmail)) {
+            throw new RuntimeException("You do not have permission to add comment to this board.");
         }
 
         Comment comment = Comment.builder()
@@ -43,19 +59,27 @@ public class CommentService {
                 .build();
 
         Comment savedComment = commentRepository.save(comment);
-        return CommentResponseDTO.builder()
-                .id(savedComment.getId())
-                .content(savedComment.getContent())
-                .createdAt(savedComment.getCreatedAt())
-                .email(savedComment.getUser().getEmail())
-                .boardId(savedComment.getBoard().getId())
-                .build();
+
+        // Comment 객체를 DTO로 변환하여 반환
+        return convertToDTO(savedComment);
     }
 
     @Transactional
     public void deleteComment(Long commentId) {
+//        Comment comment = commentRepository.findById(commentId)
+//                .orElseThrow(() -> new RuntimeException("Comment not found with id: " + commentId));
+//        comment.setDeletedAt(LocalDateTime.now()); // 삭제 시간 설정
+
         Comment comment = commentRepository.findById(commentId)
                 .orElseThrow(() -> new RuntimeException("Comment not found with id: " + commentId));
+
+        String userEmail = SecurityUtils.getCurrentUserEmail(); // 현재 사용자의 이메일 가져오기
+
+        // 사용자 권한 확인: 댓글 작성자만 삭제할 수 있도록
+        if (!comment.getUser().getEmail().equals(userEmail)) {
+            throw new RuntimeException("You do not have permission to delete this comment.");
+        }
+
         comment.setDeletedAt(LocalDateTime.now()); // 삭제 시간 설정
 
         // 실제로 데이터를 삭제하는 경우
