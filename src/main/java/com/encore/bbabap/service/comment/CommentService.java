@@ -14,6 +14,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -58,5 +60,23 @@ public class CommentService {
 
         // 실제로 데이터를 삭제하는 경우
         // commentRepository.delete(comment);
+    }
+
+    @Transactional(readOnly = true)
+    public List<CommentResponseDTO> getAllCommentsByBoardId(Long boardId) {
+        List<Comment> comments = commentRepository.findAllByBoardId(boardId);
+        return comments.stream()
+                .map(this::convertToDTO)
+                .collect(Collectors.toList());
+    }
+
+    private CommentResponseDTO convertToDTO(Comment comment) {
+        return CommentResponseDTO.builder()
+                .id(comment.getId())
+                .content(comment.getContent())
+                .createdAt(comment.getCreatedAt())
+                .email(comment.getUser().getEmail())
+                .boardId(comment.getBoard().getId())
+                .build();
     }
 }

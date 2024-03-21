@@ -8,6 +8,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/comments")
 @RequiredArgsConstructor
@@ -25,5 +27,11 @@ public class CommentController {
     public ResponseEntity<Void> deleteComment(@PathVariable Long id) {
         commentService.deleteComment(id);
         return ResponseEntity.noContent().build();
+    }
+
+    @GetMapping("/board/{boardId}")
+    public ResponseEntity<List<CommentResponseDTO>> getCommentsByBoardId(@PathVariable Long boardId) {
+        List<CommentResponseDTO> comments = commentService.getAllCommentsByBoardId(boardId);
+        return ResponseEntity.ok(comments);
     }
 }
