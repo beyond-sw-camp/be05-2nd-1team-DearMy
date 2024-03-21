@@ -1,10 +1,15 @@
 package com.encore.bbabap.domain.board;
 
+import com.encore.bbabap.domain.Comment.Comment;
 import com.encore.bbabap.domain.user.User;
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Getter
 @Setter
@@ -37,6 +42,10 @@ public class Board {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "email", referencedColumnName = "email", nullable = false)
     private User user;
+
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "board_tbl_id") // Comment 테이블에 있는 board_id 외래키로 매핑
+    private List<Comment> comments;
 
 
     @Builder
