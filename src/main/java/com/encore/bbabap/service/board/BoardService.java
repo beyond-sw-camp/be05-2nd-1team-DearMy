@@ -127,8 +127,18 @@ public class BoardService {
 
     @Transactional
     public void deleteBoard(Long id) {
+//        Board board = boardRepository.findById(id)
+//                .orElseThrow(() -> new RuntimeException("Board not found with id: " + id));
+
+        String currentUserEmail = getCurrentUserEmail(); // 사용자의 이메일 가져오기
+
         Board board = boardRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Board not found with id: " + id));
+
+        // 보드를 작성한 사용자의 이메일과 현재 사용자의 이메일을 비교하여 권한 확인
+        if (!board.getUser().getEmail().equals(currentUserEmail)) {
+            throw new RuntimeException("You do not have permission to delete this board.");
+        }
 
         // 삭제 여부 플래그 설정
         board.setDeletedYn(true);
