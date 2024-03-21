@@ -6,8 +6,9 @@ import lombok.*;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class BoardRequestDTO {
     private String title;
     private String content;
-    private String userId;
+    private String email;
 }

@@ -1,40 +1,91 @@
 package com.encore.bbabap.service.board;
 
-
 import com.encore.bbabap.api.board.request.BoardRequestDTO;
 import com.encore.bbabap.api.board.response.BoardResponseDTO;
 import com.encore.bbabap.domain.board.Board;
 import com.encore.bbabap.domain.user.User;
-import com.encore.bbabap.domain.user.UserStatus;
 import com.encore.bbabap.repository.board.BoardRepository;
 import com.encore.bbabap.repository.user.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.time.LocalDateTime;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
+@RequiredArgsConstructor
 public class BoardService {
 
-    @Autowired
-    private BoardRepository boardRepository; // BoardRepository 주입
+    private final BoardRepository boardRepository;
+    private final UserRepository userRepository;
 
-    @Autowired
-    private UserRepository userRepository;
+    @Transactional
+    public BoardResponseDTO createBoard(BoardRequestDTO requestDTO) {
+        User user = userRepository.findByEmail(requestDTO.getEmail());
+        if (user == null) {
+            throw new RuntimeException("User not found with email: " + requestDTO.getEmail());
+        }
 
-    public BoardResponseDTO registerBoard(BoardRequestDTO requestDTO) {
-        Board board = new Board();
+//        Board board = new Board();
+//        board.setTitle(requestDTO.getTitle());
+//        board.setContent(requestDTO.getContent());
+//        board.setUser(user);
+//        Board savedBoard = boardRepository.save(board);
+
+        Board board = Board.builder()
+                .title(requestDTO.getTitle())
+                .content(requestDTO.getContent())
+                .user(user)
+                .registeredAt(LocalDateTime.now()) // 등록 시간 추가
+                .build();
+        Board savedBoard = boardRepository.save(board);
+
+        return convertToDTO(savedBoard);
+    }
+
+    @Transactional(readOnly = true)
+    public List<BoardResponseDTO> getAllBoards() {
+        List<Board> boards = boardRepository.findAll();
+        return boards.stream()
+                .map(this::convertToDTO)
+                .collect(Collectors.toList());
+    }
+
+    @Transactional(readOnly = true)
+    public BoardResponseDTO getBoardById(Long id) {
+        Board board = boardRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Board not found with id: " + id));
+        return convertToDTO(board);
+    }
+
+    @Transactional
+    public BoardResponseDTO updateBoard(Long id, BoardRequestDTO requestDTO) {
+        Board board = boardRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Board not found with id: " + id));
+
         board.setTitle(requestDTO.getTitle());
         board.setContent(requestDTO.getContent());
+        board.setUpdatedAt(LocalDateTime.now());
 
-        // 사용자 정보를 가져와서 게시판 엔티티에 연결
-        User user = userRepository.findByUserId(String.valueOf(requestDTO.getUserId()))
-                .orElseThrow(() -> new RuntimeException("User not found with id: " + requestDTO.getUserId()));
-        board.setUser(user);
-        board.setDeleteYN(UserStatus.N);
-        boardRepository.save(board);
+        return convertToDTO(board);
+    }
 
-        BoardResponseDTO responseDTO = new BoardResponseDTO();
-        responseDTO.setEmail(user.getEmail());
-        responseDTO.setMessage("게시판 등록이 성공적으로 완료되었습니다.");
-        return responseDTO;
+    @Transactional
+    public void deleteBoard(Long id) {
+        boardRepository.deleteById(id);
+    }
+
+    private BoardResponseDTO convertToDTO(Board board) {
+        return BoardResponseDTO.builder()
+                .id(board.getId())
+                .title(board.getTitle())
+                .content(board.getContent())
+                .registeredAt(board.getRegisteredAt())
+                .updatedAt(board.getUpdatedAt())
+                .deletedYn(board.getDeletedYn())
+                .email(board.getUser().getEmail())
+                .build();
     }
 }
