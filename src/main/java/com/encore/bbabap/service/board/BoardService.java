@@ -26,17 +26,6 @@ public class BoardService {
     @Transactional
     public BoardResponseDTO createBoard(BoardRequestDTO requestDTO) {
 
-//        // 사용자 인증 정보 가져오기
-//        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-//
-//        // 사용자가 인증되었는지 확인
-//        if (authentication == null || !authentication.isAuthenticated()) {
-//            throw new RuntimeException("User authentication failed");
-//        }
-//
-//        // 사용자의 이메일 가져오기
-//        String userEmail = authentication.getName();
-
         // 현재 사용자의 이메일 가져오기
         String userEmail = SecurityUtils.getCurrentUserEmail();
 
@@ -45,17 +34,6 @@ public class BoardService {
         if (user == null) {
             throw new RuntimeException("User not found with email: " + userEmail);
         }
-
-//        User user = userRepository.findByEmail(requestDTO.getEmail());
-//        if (user == null) {
-//            throw new RuntimeException("User not found with email: " + requestDTO.getEmail());
-//        }
-
-//        Board board = new Board();
-//        board.setTitle(requestDTO.getTitle());
-//        board.setContent(requestDTO.getContent());
-//        board.setUser(user);
-//        Board savedBoard = boardRepository.save(board);
 
         Board board = Board.builder()
                 .title(requestDTO.getTitle())

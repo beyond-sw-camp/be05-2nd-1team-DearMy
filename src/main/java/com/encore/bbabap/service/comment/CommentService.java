@@ -28,13 +28,6 @@ public class CommentService {
 
     @Transactional
     public CommentResponseDTO addComment(CommentRequestDTO requestDTO) {
-//        Board board = boardRepository.findById(requestDTO.getBoardId())
-//                .orElseThrow(() -> new RuntimeException("Board not found with id: " + requestDTO.getBoardId()));
-//
-//        User user = userRepository.findByEmail(requestDTO.getEmail());
-//        if (user == null) {
-//            throw new RuntimeException("User not found with email: " + requestDTO.getEmail());
-//        }
 
         Board board = boardRepository.findById(requestDTO.getBoardId())
                 .orElseThrow(() -> new RuntimeException("Board not found with id: " + requestDTO.getBoardId()));
@@ -66,9 +59,6 @@ public class CommentService {
 
     @Transactional
     public void deleteComment(Long commentId) {
-//        Comment comment = commentRepository.findById(commentId)
-//                .orElseThrow(() -> new RuntimeException("Comment not found with id: " + commentId));
-//        comment.setDeletedAt(LocalDateTime.now()); // 삭제 시간 설정
 
         Comment comment = commentRepository.findById(commentId)
                 .orElseThrow(() -> new RuntimeException("Comment not found with id: " + commentId));
