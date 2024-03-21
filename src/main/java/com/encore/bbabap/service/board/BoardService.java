@@ -24,19 +24,32 @@ public class BoardService {
     private final BoardRepository boardRepository;
     private final UserRepository userRepository;
 
+    // 현재 사용자의 이메일 가져오는 메서드
+    private String getCurrentUserEmail() {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        if (authentication != null && authentication.isAuthenticated()) {
+            return authentication.getName();
+        } else {
+            throw new RuntimeException("User authentication failed");
+        }
+    }
+
     @Transactional
     public BoardResponseDTO createBoard(BoardRequestDTO requestDTO) {
 
-        // 사용자 인증 정보 가져오기
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+//        // 사용자 인증 정보 가져오기
+//        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+//
+//        // 사용자가 인증되었는지 확인
+//        if (authentication == null || !authentication.isAuthenticated()) {
+//            throw new RuntimeException("User authentication failed");
+//        }
+//
+//        // 사용자의 이메일 가져오기
+//        String userEmail = authentication.getName();
 
-        // 사용자가 인증되었는지 확인
-        if (authentication == null || !authentication.isAuthenticated()) {
-            throw new RuntimeException("User authentication failed");
-        }
-
-        // 사용자의 이메일 가져오기
-        String userEmail = authentication.getName();
+        // 현재 사용자의 이메일 가져오기
+        String userEmail = getCurrentUserEmail();
 
         // 이메일을 사용하여 사용자 정보 가져오기
         User user = userRepository.findByEmail(userEmail);
@@ -83,8 +96,22 @@ public class BoardService {
 
     @Transactional
     public BoardResponseDTO updateBoard(Long id, BoardRequestDTO requestDTO) {
+//        Board board = boardRepository.findById(id)
+//                .orElseThrow(() -> new RuntimeException("Board not found with id: " + id));
+
         Board board = boardRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Board not found with id: " + id));
+
+        // 현재 사용자의 이메일 가져오기
+        String currentUserEmail = getCurrentUserEmail();
+
+        // 게시물을 작성한 사용자의 이메일 가져오기
+        String authorEmail = board.getUser().getEmail();
+
+        // 현재 사용자와 게시물 작성자의 이메일이 일치하는지 확인
+        if (!currentUserEmail.equals(authorEmail)) {
+            throw new RuntimeException("You do not have permission to update this board.");
+        }
 
         board.setTitle(requestDTO.getTitle());
         board.setContent(requestDTO.getContent());
