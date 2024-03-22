@@ -63,8 +63,6 @@ public class BoardService {
 
     @Transactional
     public BoardResponseDTO updateBoard(Long id, BoardRequestDTO requestDTO) {
-//        Board board = boardRepository.findById(id)
-//                .orElseThrow(() -> new RuntimeException("Board not found with id: " + id));
 
         Board board = boardRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Board not found with id: " + id));
@@ -94,8 +92,6 @@ public class BoardService {
 
     @Transactional
     public void deleteBoard(Long id) {
-//        Board board = boardRepository.findById(id)
-//                .orElseThrow(() -> new RuntimeException("Board not found with id: " + id));
 
         String currentUserEmail = SecurityUtils.getCurrentUserEmail(); // 사용자의 이메일 가져오기
 
