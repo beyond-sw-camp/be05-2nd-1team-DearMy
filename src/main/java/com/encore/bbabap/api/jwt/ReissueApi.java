@@ -1,6 +1,8 @@
 package com.encore.bbabap.api.jwt;
 
+import com.encore.bbabap.domain.RefreshEntity;
 import com.encore.bbabap.jwt.JWTUtil;
+import com.encore.bbabap.repository.RefreshRepository;
 import io.jsonwebtoken.ExpiredJwtException;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
@@ -9,13 +11,22 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Date;
+
 @RestController
-@RequiredArgsConstructor
+@ResponseBody
 public class ReissueApi {
 
     private final JWTUtil jwtUtil;
+    private final RefreshRepository refreshRepository;
+
+    public ReissueApi(JWTUtil jwtUtil, RefreshRepository refreshRepository){
+        this.jwtUtil=jwtUtil;
+        this.refreshRepository=refreshRepository;
+    }
 
     @PostMapping("/reissue")
     public ResponseEntity<?> reissue(HttpServletRequest request, HttpServletResponse response) {
@@ -55,6 +66,14 @@ public class ReissueApi {
             return new ResponseEntity<>("invalid refresh token", HttpStatus.BAD_REQUEST);
         }
 
+        //DB에 저장되어 있는지 확인
+        Boolean isExist = refreshRepository.existsByRefresh(refresh);
+        if (!isExist) {
+
+            //response body
+            return new ResponseEntity<>("invalid refresh token", HttpStatus.BAD_REQUEST);
+        }
+
         String email = jwtUtil.getEmail(refresh);
         String role = jwtUtil.getRole(refresh);
 
@@ -62,11 +81,27 @@ public class ReissueApi {
         String newAccess = jwtUtil.createJwt("access", email, role, 600000L);
         String newRefresh = jwtUtil.createJwt("refresh", email, role, 86400000L);
 
+        //Refresh 토큰 저장 DB에 기존의 Refresh 토큰 삭제 후 새 Refresh 토큰 저장
+        refreshRepository.deleteByRefresh(refresh);
+        addRefreshEntity(email, newRefresh, 86400000L);
+
         //response
         response.setHeader("access", newAccess);
         response.addCookie(createCookie("refresh", newRefresh));
 
         return new ResponseEntity<>(HttpStatus.OK);
+    }
+
+    private void addRefreshEntity(String username, String refresh, Long expiredMs) {
+
+        Date date = new Date(System.currentTimeMillis() + expiredMs);
+
+        RefreshEntity refreshEntity = new RefreshEntity();
+        refreshEntity.setUsername(username);
+        refreshEntity.setRefresh(refresh);
+        refreshEntity.setExpiration(date.toString());
+
+        refreshRepository.save(refreshEntity);
     }
 
     private Cookie createCookie(String key, String value) {
@@ -78,6 +113,9 @@ public class ReissueApi {
         cookie.setHttpOnly(true);
 
         return cookie;
+        // 로그인시 헤더에 담겨오는 acess token값과 ~/reissue post요청 시 cookie에 담겨오는 refresh token값이 다름을 확인함
+        // 발급시 : Refresh 토큰을 서버측 저장소에 저장하자
+        // 갱신시 : 기존 Refresh 토큰을 삭제하고 새로 발급한 Refresh 토큰을 저장하자
     }
 
 }

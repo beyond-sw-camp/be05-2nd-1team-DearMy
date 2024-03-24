@@ -3,6 +3,7 @@ package com.encore.bbabap.config;
 import com.encore.bbabap.jwt.JWTFilter;
 import com.encore.bbabap.jwt.JWTUtil;
 import com.encore.bbabap.jwt.LoginFilter;
+import com.encore.bbabap.repository.RefreshRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.autoconfigure.security.servlet.PathRequest;
 import org.springframework.context.annotation.Bean;
@@ -27,6 +28,13 @@ public class SecurityConfig {
 
     private final AuthenticationConfiguration authenticationConfiguration;
     private final JWTUtil jwtUtil;
+    private final RefreshRepository refreshRepository;
+
+    public SecurityConfig(AuthenticationConfiguration authenticationConfiguration, JWTUtil jwtUtil, RefreshRepository refreshRepository){
+        this.authenticationConfiguration=authenticationConfiguration;
+        this.jwtUtil=jwtUtil;
+        this.refreshRepository=refreshRepository;
+    }
 
     @Bean
     public AuthenticationManager authenticationManager(AuthenticationConfiguration configuration)
@@ -66,7 +74,7 @@ public class SecurityConfig {
 
         http
                 .addFilterAt(new LoginFilter(authenticationManager(authenticationConfiguration),
-                        jwtUtil), UsernamePasswordAuthenticationFilter.class);
+                        jwtUtil, refreshRepository), UsernamePasswordAuthenticationFilter.class);
 
         http
                 .sessionManagement((session) -> session
