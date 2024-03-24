@@ -28,12 +28,17 @@ public class BoardService {
 
         // 현재 사용자의 이메일 가져오기
         String userEmail = SecurityUtils.getCurrentUserEmail();
+        System.out.println("현재 로그인한 사용자의 이메일: " + userEmail);
 
         // 이메일을 사용하여 사용자 정보 가져오기
         User user = userRepository.findByEmail(userEmail);
-        if (user == null) {
-            throw new RuntimeException("User not found with email: " + userEmail);
-        }
+        System.out.println(user);
+
+//        if (user == null) {
+//            throw new RuntimeException("User not found with email: " + userEmail);
+//        } else {
+//            System.out.println("사용자 정보를 가져온 이메일: " + userEmail);
+//        }
 
         Board board = Board.builder()
                 .title(requestDTO.getTitle())
