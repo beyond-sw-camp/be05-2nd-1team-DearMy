@@ -1,5 +1,6 @@
 package com.encore.bbabap.config;
 
+import com.encore.bbabap.jwt.CustomLogoutFilter;
 import com.encore.bbabap.jwt.JWTFilter;
 import com.encore.bbabap.jwt.JWTUtil;
 import com.encore.bbabap.jwt.LoginFilter;
@@ -19,11 +20,11 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.security.web.authentication.logout.LogoutFilter;
 
 
 @Configuration
 @EnableWebSecurity
-@RequiredArgsConstructor
 public class SecurityConfig {
 
     private final AuthenticationConfiguration authenticationConfiguration;
@@ -79,7 +80,8 @@ public class SecurityConfig {
         http
                 .sessionManagement((session) -> session
                         .sessionCreationPolicy(SessionCreationPolicy.STATELESS));
-
+        http
+                .addFilterBefore(new CustomLogoutFilter(jwtUtil, refreshRepository), LogoutFilter.class);
         return http.build();
     }
 
