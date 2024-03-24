@@ -46,13 +46,13 @@ public class Board {
     @JoinColumn(name = "email", referencedColumnName = "email", nullable = false)
     private User user;
 
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinColumn(name = "board_tbl_id") // Comment 테이블에 있는 board_id 외래키로 매핑
+    @OneToMany(mappedBy = "board", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+//    @JoinColumn(name = "board_tbl_id") // Comment 테이블에 있는 board_id 외래키로 매핑
     private List<Comment> comments;
 
 
     @Builder
-    public Board(Long id, String title, String content, LocalDateTime registeredAt, LocalDateTime updatedAt, Boolean deletedYn, LocalDateTime deletedAt, User user) {
+    public Board(Long id, String title, String content, LocalDateTime registeredAt, LocalDateTime updatedAt, Boolean deletedYn, LocalDateTime deletedAt, User user, List<Comment> comments) {
         this.id = id; // 롬복이 자동으로 처리
         this.title = title;
         this.content = content;
@@ -64,6 +64,7 @@ public class Board {
             throw new IllegalArgumentException("User information is required to create a board.");
         }
         this.user = user;
+        this.comments = comments; // 댓글 리스트 초기화
     }
 
 }

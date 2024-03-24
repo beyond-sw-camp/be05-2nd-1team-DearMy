@@ -3,6 +3,7 @@ package com.encore.bbabap.service.board;
 
 import com.encore.bbabap.api.board.request.BoardRequestDTO;
 import com.encore.bbabap.api.board.response.BoardResponseDTO;
+import com.encore.bbabap.api.comment.response.CommentResponseDTO;
 import com.encore.bbabap.config.SecurityUtils;
 import com.encore.bbabap.domain.board.Board;
 import com.encore.bbabap.domain.user.User;
@@ -61,7 +62,7 @@ public class BoardService {
 
     @Transactional(readOnly = true)
     public BoardResponseDTO getBoardById(Long id) {
-        Board board = boardRepository.findById(id)
+        Board board = boardRepository.findByIdWithComments(id)
                 .orElseThrow(() -> new RuntimeException("Board not found with id: " + id));
         return convertToDTO(board);
     }
@@ -119,6 +120,16 @@ public class BoardService {
     }
 
     private BoardResponseDTO convertToDTO(Board board) {
+        List<CommentResponseDTO> commentDTOs = board.getComments().stream()
+                .map(comment -> CommentResponseDTO.builder()
+                        .id(comment.getId())
+                        .content(comment.getContent())
+                        .createdAt(comment.getCreatedAt())
+                        .email(comment.getUser().getEmail())
+                        .boardId(comment.getBoard().getId())
+                        .build())
+                .collect(Collectors.toList());
+
         return BoardResponseDTO.builder()
                 .id(board.getId())
                 .title(board.getTitle())
@@ -127,6 +138,7 @@ public class BoardService {
                 .updatedAt(board.getUpdatedAt())
                 .deletedYn(board.getDeletedYn())
                 .email(board.getUser().getEmail())
+                .comments(commentDTOs)
                 .build();
     }
 }
