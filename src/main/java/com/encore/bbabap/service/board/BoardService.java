@@ -10,8 +10,10 @@ import com.encore.bbabap.domain.user.User;
 import com.encore.bbabap.repository.board.BoardRepository;
 import com.encore.bbabap.repository.user.UserRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -46,6 +48,7 @@ public class BoardService {
                 .content(requestDTO.getContent())
                 .user(user)
                 .registeredAt(LocalDateTime.now()) // 등록 시간 추가
+                .deletedYn(false) // 게시글 생성시 삭제 여부 false로 등록
                 .build();
         Board savedBoard = boardRepository.save(board);
 
@@ -55,6 +58,11 @@ public class BoardService {
     @Transactional(readOnly = true)
     public List<BoardResponseDTO> getAllBoards() {
         List<Board> boards = boardRepository.findAll();
+        for(Board board : boards){ // 삭제된 게시글 조회 x 처리
+            if (board.getDeletedYn()){
+                boards.remove(board);
+            }
+        }
         return boards.stream()
                 .map(this::convertToDTO)
                 .collect(Collectors.toList());
@@ -62,9 +70,14 @@ public class BoardService {
 
     @Transactional(readOnly = true)
     public BoardResponseDTO getBoardById(Long id) {
-        Board board = boardRepository.findByIdWithComments(id)
-                .orElseThrow(() -> new RuntimeException("Board not found with id: " + id));
-        return convertToDTO(board);
+        Board board = boardRepository.findByIdWithComments(id).orElse(null);
+        if (board != null && board.getDeletedYn()) { // 삭제된 게시물인 경우
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Board with id " + id + " is deleted"); // 삭제된 게시물인 경우
+        }
+        else if(board==null) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Board not found with id: " + id); // 없는 게시물인 경우
+        }
+        return convertToDTO(board); // 해당 게시물이 있는 경우
     }
 
     @Transactional

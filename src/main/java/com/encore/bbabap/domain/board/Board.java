@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 @Getter
@@ -64,7 +65,7 @@ public class Board {
             throw new IllegalArgumentException("User information is required to create a board.");
         }
         this.user = user;
-        this.comments = comments; // 댓글 리스트 초기화
+        this.comments = comments != null ? comments : new ArrayList<>(); // 댓글 리스트 초기화 & null 반환 방지
     }
 
 }
