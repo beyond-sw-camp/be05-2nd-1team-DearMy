@@ -10,6 +10,8 @@ import com.encore.bbabap.domain.user.User;
 import com.encore.bbabap.repository.board.BoardRepository;
 import com.encore.bbabap.repository.user.UserRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -78,6 +80,15 @@ public class BoardService {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Board not found with id: " + id); // 없는 게시물인 경우
         }
         return convertToDTO(board); // 해당 게시물이 있는 경우
+    }
+
+    @Transactional(readOnly = true)
+    public Page<BoardResponseDTO> searchBoardsByKeyword(String keyword, Pageable pageable) {
+        // 제목(title) 또는 내용(contents)에서 키워드를 포함하는 게시물을 검색
+        Page<Board> boards = boardRepository.findByTitleContainingIgnoreCaseOrContentContainingIgnoreCase(keyword, keyword, pageable);
+
+        // 검색 결과를 BoardResponseDTO로 변환
+        return boards.map(this::convertToDTO);
     }
 
     @Transactional
