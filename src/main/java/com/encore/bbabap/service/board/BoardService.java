@@ -16,6 +16,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -130,6 +131,29 @@ public class BoardService {
 
         // 실제로 데이터를 삭제하는 경우
         // boardRepository.delete(board);
+    }
+
+    @Transactional
+    public List<BoardResponseDTO> getMyBoards() {
+        // 현재 사용자의 이메일 가져오기
+        String userEmail = SecurityUtils.getCurrentUserEmail();
+        System.out.println("현재 로그인한 사용자의 이메일: " + userEmail);
+
+        // 이메일을 사용하여 사용자 정보 가져오기
+        User user = userRepository.findByEmail(userEmail);
+        System.out.println(user);
+
+        List<Board> boards = boardRepository.findAll();
+
+        List<BoardResponseDTO> list = new ArrayList<>();
+        for(Board board : boards){
+            if(board.getUser().getEmail().equals(userEmail) && !board.getDeletedYn()){
+                BoardResponseDTO dto = convertToDTO(board);
+                list.add(dto);
+            }
+        }
+
+        return list;
     }
 
     private BoardResponseDTO convertToDTO(Board board) {

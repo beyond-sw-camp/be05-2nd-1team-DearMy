@@ -46,4 +46,10 @@ public class BoardController {
         boardService.deleteBoard(id);
         return ResponseEntity.noContent().build();
     }
+
+    @GetMapping("/myBoards")
+    public ResponseEntity<List<BoardResponseDTO>> getMyBoards(){
+        List<BoardResponseDTO> boards = boardService.getMyBoards();
+        return ResponseEntity.ok(boards);
+    }
 }
