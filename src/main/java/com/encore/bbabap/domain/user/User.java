@@ -13,8 +13,6 @@ import static jakarta.persistence.GenerationType.IDENTITY;
 @NoArgsConstructor()
 @Getter
 @Table(name = "users")
-//@Setter
-//@ToString
 public class User {
 
     @Id
