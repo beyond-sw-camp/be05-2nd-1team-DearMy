@@ -21,7 +21,7 @@
         <td></td>
     </tr>
 </table>
-<div id="map" style="width:100%;height:350px;"></div>
+<div id="map" style="width:85%;height:700px;"></div>
 
 <!-- kakao API -->
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=20d8bd05963c7e7755d93c037fbdb9fe&libraries=services"></script>
@@ -31,8 +31,6 @@
             center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
             level: 3 // 지도의 확대 레벨
         };
-
-
     $('#searchBtn').click(function(){
         // 버튼을 click했을때
 
