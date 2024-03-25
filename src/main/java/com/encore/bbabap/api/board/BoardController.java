@@ -61,4 +61,9 @@ public class BoardController {
 
         return ResponseEntity.ok(resultPage);
     }
+    @GetMapping("/myBoards")
+    public ResponseEntity<List<BoardResponseDTO>> getMyBoards(){
+        List<BoardResponseDTO> boards = boardService.getMyBoards();
+        return ResponseEntity.ok(boards);
+    }
 }
