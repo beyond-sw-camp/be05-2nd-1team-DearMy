@@ -75,11 +75,6 @@ public class User {
 //                request.getCarType());
 //    }
 
-    // git test test
-    // git test test 2
-    // git test test 3
-
-
 
 }
 
