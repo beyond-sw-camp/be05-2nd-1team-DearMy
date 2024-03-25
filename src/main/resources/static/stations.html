@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>전기차 충전소 목록</title>
+</head>
+<body>
+<h2>전기차 충전소 목록</h2>
+<ul>
+  <li th:each="station : ${stations}">
+    <a th:href="@{/station(id=${station.statId})}" th:text="${station.statNm}">충전소 이름</a>
+  </li>
+</ul>
+</body>
+</html>

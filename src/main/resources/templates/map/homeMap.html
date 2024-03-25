@@ -10,57 +10,65 @@
 <div id="wrapper" class="relative">
   <div id="map" class="w-screen h-screen">
   </div>
-
 </div>
 
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=f4e869be3367c0abfb655792d5e9ff5b"></script>
 <script>
-  // 사용자의 위치를 받아와서 지도를 생성하고 전기차 충전소 데이터를 표시하는 함수
-  function showChargingStationsOnMap(userPosition) {
-    var mapContainer = document.getElementById('map');
-    var mapOption = {
-      center: new kakao.maps.LatLng(userPosition.coords.latitude, userPosition.coords.longitude),
-      level: 3
-    };
+  // 사용자의 위치를 받아와서 서버로 전송하는 함수
+  function sendUserLocation(position) {
+    var latitude = position.coords.latitude;
+    var longitude = position.coords.longitude;
 
-    // 지도 생성
-    var map = new kakao.maps.Map(mapContainer, mapOption);
-
-    // 전기차 충전소 데이터 가져와서 표시
-    fetch('/api/location')
-            .then(response => response.text())
-            .then(xmlData => {
-              console.log(xmlData); // XML 데이터 확인용
-
-              var parser = new DOMParser();
-              var xmlDoc = parser.parseFromString(xmlData, 'text/xml');
-              var chargingStations = xmlDoc.getElementsByTagName('item');
-
-              console.log(chargingStations.length); // 전기차 충전소 개수 확인용
-
-              for (var i = 0; i < chargingStations.length; i++) {
-                var station = chargingStations[i];
-                var name = station.getElementsByTagName('statNm')[0].childNodes[0].nodeValue;
-                var lat = parseFloat(station.getElementsByTagName('lat')[0].childNodes[0].nodeValue);
-                var lng = parseFloat(station.getElementsByTagName('lng')[0].childNodes[0].nodeValue);
-
-                console.log(name, lat, lng); // 전기차 충전소 정보 확인용
-
-                var markerPosition = new kakao.maps.LatLng(lat, lng);
-                var marker = new kakao.maps.Marker({
-                  position: markerPosition,
-                  map: map,
-                  title: name
-                });
+    // 서버로 위치 정보를 전송
+    fetch('/api/location', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ latitude: latitude, longitude: longitude })
+    })
+            .then(response => {
+              if (!response.ok) {
+                throw new Error('Failed to send user location');
               }
+              return response.json();
+            })
+            .then(data => {
+              // 서버에서 받은 위치 정보를 기반으로 지도를 생성
+              var mapContainer = document.getElementById('map'),
+                      mapOption = {
+                        center: new kakao.maps.LatLng(data.latitude, data.longitude),
+                        level: 3
+                      };
+
+              var map = new kakao.maps.Map(mapContainer, mapOption);
+
+              // 충전소 위치 데이터를 가져와서 마커를 추가
+              fetch('/api/charging-stations')
+                      .then(response => response.json())
+                      .then(chargingStations => {
+                        chargingStations.forEach(station => {
+                          // 충전소 위치에 마커를 추가
+                          var markerPosition = new kakao.maps.LatLng(station.latitude, station.longitude);
+                          var marker = new kakao.maps.Marker({
+                            position: markerPosition
+                          });
+                          marker.setMap(map);
+                        });
+                      })
+                      .catch(error => {
+                        console.error('Error getting charging stations:', error);
+                      });
+
             })
             .catch(error => {
-              console.error('Error fetching charging stations:', error);
+              console.error('Error sending user location:', error);
             });
   }
 
-  // 현재 위치를 가져와서 함수 호출
-  navigator.geolocation.getCurrentPosition(showChargingStationsOnMap);
+  // 사용자의 위치를 받아오는 함수
+  navigator.geolocation.getCurrentPosition(sendUserLocation);
 </script>
+
 </body>
 </html>

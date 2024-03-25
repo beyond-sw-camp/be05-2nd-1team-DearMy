@@ -12,6 +12,8 @@ public class LocationController {
 
     @PostMapping("/api/location")
     public Map<String, Double> receiveUserLocation(@RequestBody Map<String, Double> userLocation) {
+
+
         // 클라이언트에서 전송한 위치 정보를 받아와서 처리
         double latitude = userLocation.get("latitude");
         double longitude = userLocation.get("longitude");
