@@ -13,8 +13,6 @@ import static jakarta.persistence.GenerationType.IDENTITY;
 @NoArgsConstructor()
 @Getter
 @Table(name = "users")
-//@Setter
-//@ToString
 public class User {
 
     @Id
@@ -76,7 +74,6 @@ public class User {
 //        return new Member(request.getEmail(), request.getPassword(), request.getNickname(),
 //                request.getCarType());
 //    }
-
 
 
 }

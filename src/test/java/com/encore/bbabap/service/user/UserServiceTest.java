@@ -1,17 +1,15 @@
-package com.encore.bbabap.user;
+package com.encore.bbabap.service.user;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 import com.encore.bbabap.domain.enums.CarType;
 import com.encore.bbabap.domain.user.User;
-import com.encore.bbabap.service.user.UserService;
+import java.util.List;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.security.crypto.password.PasswordEncoder;
-
-import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 class UserServiceTest {
