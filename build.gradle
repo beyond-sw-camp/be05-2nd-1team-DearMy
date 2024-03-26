@@ -1,5 +1,5 @@
 plugins {
-	id
+	id 'java'
 	id 'org.springframework.boot' version '3.1.9'
 	id 'io.spring.dependency-management' version '1.1.4'
 }
@@ -13,9 +13,10 @@ java {
 
 configurations {
 	compileOnly {
-		extendsFrom annotationProcessor'java'
+		extendsFrom annotationProcessor
 	}
 }
+
 
 repositories {
 	mavenCentral()
@@ -24,13 +25,13 @@ repositories {
 dependencies {
 	// web
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 
 	// validation & security
 	implementation 'org.springframework.boot:spring-boot-starter-validation'
 	implementation 'org.springframework.boot:spring-boot-starter-security'
 
 	// db
-	// mysql
 	runtimeOnly 'com.mysql:mysql-connector-j'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 
@@ -43,6 +44,11 @@ dependencies {
 	implementation 'io.jsonwebtoken:jjwt-impl:0.12.3'
 	implementation 'io.jsonwebtoken:jjwt-jackson:0.12.3'
 
+	implementation 'org.springframework.boot:spring-boot-starter-webflux'
+	implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'
+	implementation 'javax.servlet:jstl:1.2'
+	implementation 'org.json:json:20231013'
+
 	// test
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
@@ -51,6 +57,8 @@ tasks.named('bootBuildImage') {
 	builder = 'paketobuildpacks/builder-jammy-base:latest'
 }
 
+
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
