@@ -1,11 +1,14 @@
 <component name="libraryTable">
-  <library name="Gradle: org.springframework:spring-jdbc:6.0.17">
+  <library name="Gradle: org.springframework:spring-jdbc:6.0.17" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="org.springframework" artifactId="spring-jdbc" version="6.0.17" />
     <CLASSES>
-      <root url="jar:///Library/Java/JavaVirtualMachines/gradle-7.6/caches/modules-2/files-2.1/org.springframework/spring-jdbc/6.0.17/8060275161ba07c19f6487169db9a124c139e0ae/spring-jdbc-6.0.17.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-jdbc/6.0.17/8060275161ba07c19f6487169db9a124c139e0ae/spring-jdbc-6.0.17.jar!/" />
     </CLASSES>
-    <JAVADOC />
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-jdbc/6.0.17/6dd93fe17ded28a1c49fe83be25aa761270cba3/spring-jdbc-6.0.17-javadoc.jar!/" />
+    </JAVADOC>
     <SOURCES>
-      <root url="jar:///Library/Java/JavaVirtualMachines/gradle-7.6/caches/modules-2/files-2.1/org.springframework/spring-jdbc/6.0.17/9963b9f524323550eba3fa39b0f5812097039bb8/spring-jdbc-6.0.17-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-jdbc/6.0.17/9963b9f524323550eba3fa39b0f5812097039bb8/spring-jdbc-6.0.17-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

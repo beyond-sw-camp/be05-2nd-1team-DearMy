@@ -1,11 +1,13 @@
 <component name="libraryTable">
-  <library name="Gradle: org.eclipse.jdt:ecj:3.33.0">
+  <library name="Gradle: org.eclipse.jdt:ecj:3.33.0" external-system-id="GRADLE">
     <CLASSES>
-      <root url="jar:///Library/Java/JavaVirtualMachines/gradle-7.6/caches/modules-2/files-2.1/org.eclipse.jdt/ecj/3.33.0/4041d27ffea3c9351e3121f9bfe94dea4723d583/ecj-3.33.0.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jdt/ecj/3.33.0/4041d27ffea3c9351e3121f9bfe94dea4723d583/ecj-3.33.0.jar!/" />
     </CLASSES>
-    <JAVADOC />
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jdt/ecj/3.33.0/b8a11ebf768878ebe458ea66ccda27ce86686da7/ecj-3.33.0-javadoc.jar!/" />
+    </JAVADOC>
     <SOURCES>
-      <root url="jar:///Library/Java/JavaVirtualMachines/gradle-7.6/caches/modules-2/files-2.1/org.eclipse.jdt/ecj/3.33.0/69fc06a9f4b10621d394e50710c169ceb516e550/ecj-3.33.0-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jdt/ecj/3.33.0/69fc06a9f4b10621d394e50710c169ceb516e550/ecj-3.33.0-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

@@ -1,11 +1,14 @@
 <component name="libraryTable">
-  <library name="Gradle: org.springframework:spring-expression:6.0.17">
+  <library name="Gradle: org.springframework:spring-expression:6.0.17" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="org.springframework" artifactId="spring-expression" version="6.0.17" />
     <CLASSES>
-      <root url="jar:///Library/Java/JavaVirtualMachines/gradle-7.6/caches/modules-2/files-2.1/org.springframework/spring-expression/6.0.17/50869c71d9d520ce43ef34cbcf8143c3cfb670af/spring-expression-6.0.17.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-expression/6.0.17/50869c71d9d520ce43ef34cbcf8143c3cfb670af/spring-expression-6.0.17.jar!/" />
     </CLASSES>
-    <JAVADOC />
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-expression/6.0.17/5047fe5692d57103972d7d8ab007f9fbf850f41e/spring-expression-6.0.17-javadoc.jar!/" />
+    </JAVADOC>
     <SOURCES>
-      <root url="jar:///Library/Java/JavaVirtualMachines/gradle-7.6/caches/modules-2/files-2.1/org.springframework/spring-expression/6.0.17/afb944c3446f49a0c2158004af0604b0b7094e0e/spring-expression-6.0.17-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-expression/6.0.17/afb944c3446f49a0c2158004af0604b0b7094e0e/spring-expression-6.0.17-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

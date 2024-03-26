@@ -1,11 +1,13 @@
 <component name="libraryTable">
-  <library name="Gradle: io.netty:netty-resolver-dns-classes-macos:4.1.107.Final">
+  <library name="Gradle: io.netty:netty-resolver-dns-classes-macos:4.1.107.Final" external-system-id="GRADLE">
     <CLASSES>
-      <root url="jar:///Library/Java/JavaVirtualMachines/gradle-7.6/caches/modules-2/files-2.1/io.netty/netty-resolver-dns-classes-macos/4.1.107.Final/eb069de9b8621a42e7c1843c5f21c7a86e943e0f/netty-resolver-dns-classes-macos-4.1.107.Final.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.netty/netty-resolver-dns-classes-macos/4.1.107.Final/eb069de9b8621a42e7c1843c5f21c7a86e943e0f/netty-resolver-dns-classes-macos-4.1.107.Final.jar!/" />
     </CLASSES>
-    <JAVADOC />
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.netty/netty-resolver-dns-classes-macos/4.1.107.Final/1b7ecc13325f007aa6249e33c08a9aeb2f9bb147/netty-resolver-dns-classes-macos-4.1.107.Final-javadoc.jar!/" />
+    </JAVADOC>
     <SOURCES>
-      <root url="jar:///Library/Java/JavaVirtualMachines/gradle-7.6/caches/modules-2/files-2.1/io.netty/netty-resolver-dns-classes-macos/4.1.107.Final/923d95b819eefad6ae7e7344af9f485cf8fe0ff9/netty-resolver-dns-classes-macos-4.1.107.Final-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.netty/netty-resolver-dns-classes-macos/4.1.107.Final/923d95b819eefad6ae7e7344af9f485cf8fe0ff9/netty-resolver-dns-classes-macos-4.1.107.Final-sources.jar!/" />
     </SOURCES>
   </library>
 </component>
