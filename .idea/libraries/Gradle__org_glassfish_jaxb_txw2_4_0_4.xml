@@ -1,11 +1,11 @@
 <component name="libraryTable">
-  <library name="Gradle: org.glassfish.jaxb:txw2:4.0.4">
+  <library name="Gradle: org.glassfish.jaxb:txw2:4.0.4" external-system-id="GRADLE">
     <CLASSES>
-      <root url="jar:///Library/Java/JavaVirtualMachines/gradle-7.6/caches/modules-2/files-2.1/org.glassfish.jaxb/txw2/4.0.4/cfd2bcf08782673ac370694fdf2cf76dbaa607ef/txw2-4.0.4.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/txw2/4.0.4/cfd2bcf08782673ac370694fdf2cf76dbaa607ef/txw2-4.0.4.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar:///Library/Java/JavaVirtualMachines/gradle-7.6/caches/modules-2/files-2.1/org.glassfish.jaxb/txw2/4.0.4/1171c6ba6a0f040618222c01abe951a5f70f7b2/txw2-4.0.4-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/txw2/4.0.4/1171c6ba6a0f040618222c01abe951a5f70f7b2/txw2-4.0.4-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

@@ -47,8 +47,8 @@ public class BoardServiceTest {
 //        requestDTO.setEmail("test@example.com");
 
         User user = new User();
-        user.setEmail("test@example.com");
-        user.setNickname("test_user");
+//        user.setEmail("test@example.com");
+//        user.setNickname("test_user");
 
 //        when(userRepository.findByEmail(requestDTO.getEmail())).thenReturn(user);
         when(boardRepository.save(any(Board.class))).thenAnswer(invocation -> {
