@@ -3,7 +3,6 @@ package com.encore.bbabap.board;
 import com.encore.bbabap.api.board.request.BoardRequestDTO;
 import com.encore.bbabap.api.board.response.BoardResponseDTO;
 import com.encore.bbabap.domain.board.Board;
-import com.encore.bbabap.domain.user.User;
 import com.encore.bbabap.repository.board.BoardRepository;
 import com.encore.bbabap.repository.user.UserRepository;
 import com.encore.bbabap.service.board.BoardService;
@@ -46,9 +45,9 @@ public class BoardServiceTest {
         requestDTO.setContent("Test Content");
 //        requestDTO.setEmail("test@example.com");
 
-        User user = new User();
-        user.setEmail("test@example.com");
-        user.setNickname("test_user");
+//        User user = new User();
+//        user.setEmail("test@example.com");
+//        user.setNickname("test_user");
 
 //        when(userRepository.findByEmail(requestDTO.getEmail())).thenReturn(user);
         when(boardRepository.save(any(Board.class))).thenAnswer(invocation -> {

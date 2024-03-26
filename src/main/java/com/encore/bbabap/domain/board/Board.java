@@ -68,4 +68,20 @@ public class Board {
         this.comments = comments != null ? comments : new ArrayList<>(); // 댓글 리스트 초기화 & null 반환 방지
     }
 
+    public static Board create(String title, String content, LocalDateTime registeredAt, LocalDateTime updatedAt, Boolean deletedYn, LocalDateTime deletedAt, User user) {
+        if (user == null) {
+            throw new IllegalArgumentException("User information is required to create a board.");
+        }
+
+        return Board.builder()
+                .title(title)
+                .content(content)
+                .registeredAt(registeredAt)
+                .updatedAt(updatedAt)
+                .deletedYn(deletedYn)
+                .deletedAt(deletedAt)
+                .user(user)
+                .build();
+    }
+
 }
