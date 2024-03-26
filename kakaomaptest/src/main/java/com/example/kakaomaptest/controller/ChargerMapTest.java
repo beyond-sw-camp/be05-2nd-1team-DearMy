@@ -1,8 +1,10 @@
 package com.example.kakaomaptest.controller;
 
+import com.example.kakaomaptest.service.MapService;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,8 +18,11 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 @RestController
+@RequiredArgsConstructor
 @RequestMapping("/babap/charger")
 public class ChargerMapTest {
+
+    private final MapService mapService;
     static final String baseURL = "http://infuser.odcloud.kr/oas/docs?namespace=15119741/v1" ; //API의 스펙을 설명하는 문서를 위한 URL
     static final String realDataURL = "https://api.odcloud.kr/api/15119741/v1/uddi:fe904caf-636f-4a49-aa94-e9064a446b3e"; //실제 API데이터를 가져오는 URL
     static final String myServiceKey = "By8%2BzbzlZwxRaJwkLoTWe7rgJIYf3TIkEnbrCY5mNB8f3clGoYgnY8J7f5C8bDSD1p21ek7oJoGHFbWhwRMRhw%3D%3D";//API키 >> 본인 키로 변경
@@ -232,4 +237,5 @@ public class ChargerMapTest {
         }//try-catch end
         return jsonPrintString;
     }//method end
+
 }//class end
