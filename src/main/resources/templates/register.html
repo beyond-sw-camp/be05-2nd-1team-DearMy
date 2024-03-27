@@ -32,7 +32,7 @@
     const formData = new FormData(this);
     const jsonObject = {};
     formData.forEach((value, key) => { jsonObject[key] = value; });
-    const response = await fetch('/api/v1/members/register', {
+    const response = await fetch('/members/register', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
