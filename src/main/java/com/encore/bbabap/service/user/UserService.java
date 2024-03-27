@@ -17,7 +17,7 @@ import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
-@Transactional(readOnly = false)
+@Transactional
 public class UserService {
 
     private final UserRepository userRepository;
@@ -42,7 +42,7 @@ public class UserService {
 
         return users.stream()
                 .map(user -> new UserResponse(user.getEmail(), user.getNickname()
-                        ))
+                ))
                 .collect(Collectors.toList());
     }
 
@@ -78,17 +78,4 @@ public class UserService {
                 .build();
     }
 
-//    @Transactional
-//    public UserResponse login(LoginUserRequest request) {
-//        User findUser = userRepository.findByEmail(request.getEmail())
-//                .orElseThrow(() -> new UserNotFoundException("존재하지 않는 회원입니다."));
-//
-//        if (findUser.getPassword().equals(request.getPassword())) {
-//            System.out.println("로그인 하였습니다.");
-//        }
-//
-//        System.out.println("비밀번호 또는 아이디를 확인해주세요");
-//
-//        return null;
-//    }
 }
