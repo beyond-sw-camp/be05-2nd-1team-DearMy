@@ -242,7 +242,6 @@
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
     <configuration name="BoardTest.testCreateBoard" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -266,7 +265,6 @@
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
     <configuration name="BoardTest.testDeleteBoard" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -290,7 +288,6 @@
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
     <configuration name="BoardTest.testReadBoard" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -314,7 +311,6 @@
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
     <configuration name="BoardTest.testUpdateBoard" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -338,7 +334,6 @@
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
     <configuration default="true" type="JetRunConfigurationType">
@@ -361,6 +356,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Gradle.BoardTest" />
+      <item itemvalue="Gradle.BoardTest.testCreateBoard" />
+      <item itemvalue="Gradle.BoardTest.testDeleteBoard" />
+      <item itemvalue="Gradle.BoardTest.testReadBoard" />
+      <item itemvalue="Gradle.BoardTest.testUpdateBoard" />
+      <item itemvalue="Spring Boot.BabbapApplication" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.BoardTest" />
