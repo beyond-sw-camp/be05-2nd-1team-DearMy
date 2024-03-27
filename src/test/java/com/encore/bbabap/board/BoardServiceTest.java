@@ -18,6 +18,7 @@ import org.junit.jupiter.api.Test;
 //import static org.mockito.ArgumentMatchers.any;
 //import static org.mockito.Mockito.when;
 
+<<<<<<< HEAD
 //@SpringBootTest
 //public class BoardServiceTest {
 //
@@ -67,6 +68,61 @@ import org.junit.jupiter.api.Test;
 //        assertThat(createdBoard.getContent()).isEqualTo("Test Content");
 //        assertThat(createdBoard.getEmail()).isEqualTo("test@example.com");
 //    }
+=======
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.when;
+
+@SpringBootTest
+public class BoardServiceTest {
+
+    @Autowired
+    private BoardService boardService;
+
+    @Autowired
+    private BoardRepository boardRepository;
+
+    @Autowired
+    private UserRepository userRepository;
+
+    @BeforeEach
+    void setUp() {
+        boardRepository = Mockito.mock(BoardRepository.class);
+        userRepository = Mockito.mock(UserRepository.class);
+        boardService = new BoardService(boardRepository, userRepository);
+    }
+
+    @DisplayName("게시물 생성 테스트")
+    @Test
+    void createBoardTest() {
+        // given
+        BoardRequestDTO requestDTO = new BoardRequestDTO();
+        requestDTO.setTitle("Test Title");
+        requestDTO.setContent("Test Content");
+//        requestDTO.setEmail("test@example.com");
+
+        User user = new User();
+//        user.setEmail("test@example.com");
+//        user.setNickname("test_user");
+
+//        when(userRepository.findByEmail(requestDTO.getEmail())).thenReturn(user);
+        when(boardRepository.save(any(Board.class))).thenAnswer(invocation -> {
+            Board board = invocation.getArgument(0);
+            board.setId(1L); // Setting ID for the saved board
+            return board;
+        });
+
+        // when
+        BoardResponseDTO createdBoard = boardService.createBoard(requestDTO);
+
+        // then
+        assertThat(createdBoard).isNotNull();
+        assertThat(createdBoard.getId()).isEqualTo(1L);
+        assertThat(createdBoard.getTitle()).isEqualTo("Test Title");
+        assertThat(createdBoard.getContent()).isEqualTo("Test Content");
+        assertThat(createdBoard.getEmail()).isEqualTo("test@example.com");
+    }
+>>>>>>> refactoring-zn
 
 //    @DisplayName("모든 게시물 조회 테스트")
 //    @Test

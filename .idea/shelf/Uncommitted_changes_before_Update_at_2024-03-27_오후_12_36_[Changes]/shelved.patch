@@ -1,0 +1,1198 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"d53b21e1-42f9-4465-afb3-b7b5ab54fc2d\" name=\"Changes\" comment=\"댓글 삭제여부 추가 + 삭제된 댓글 조회 안되게 처리 &amp; 서버시간 서울로 변경\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/2024-03-20__3_19__________.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/2024-03-20__3_19__________.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/2024-03-26__4_15_________Changes_.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/2024-03-26__4_15_________Changes_.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"ExternalProjectsData\">\r\n    <projectState path=\"$PROJECT_DIR$\">\r\n      <ProjectState />\r\n    </projectState>\r\n    <projectState path=\"$PROJECT_DIR$/kakaomaptest\">\r\n      <ProjectState />\r\n    </projectState>\r\n  </component>\r\n  <component name=\"ExternalProjectsManager\">\r\n    <system id=\"GRADLE\">\r\n      <state>\r\n        <task path=\"$PROJECT_DIR$\">\r\n          <activation />\r\n        </task>\r\n        <projects_view>\r\n          <tree_state>\r\n            <expand>\r\n              <path>\r\n                <item name=\"\" type=\"6a2764b6:ExternalProjectsStructure$RootNode\" />\r\n                <item name=\"Bbabap_pjt\" type=\"f1a62948:ProjectNode\" />\r\n              </path>\r\n              <path>\r\n                <item name=\"\" type=\"6a2764b6:ExternalProjectsStructure$RootNode\" />\r\n                <item name=\"Bbabap_pjt\" type=\"f1a62948:ProjectNode\" />\r\n                <item name=\"Tasks\" type=\"e4a08cd1:TasksNode\" />\r\n              </path>\r\n              <path>\r\n                <item name=\"\" type=\"6a2764b6:ExternalProjectsStructure$RootNode\" />\r\n                <item name=\"Bbabap_pjt\" type=\"f1a62948:ProjectNode\" />\r\n                <item name=\"Tasks\" type=\"e4a08cd1:TasksNode\" />\r\n                <item name=\"build\" type=\"c8890929:TasksNode$1\" />\r\n              </path>\r\n            </expand>\r\n            <select />\r\n          </tree_state>\r\n        </projects_view>\r\n      </state>\r\n    </system>\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"JUnit5 Test Class\" />\r\n        <option value=\"HTML File\" />\r\n        <option value=\"AnnotationType\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"refactoring\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;,\r\n    &quot;assignee&quot;: &quot;zzimni&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GitToolBoxStore\">\r\n    <option name=\"projectConfigVersion\" value=\"5\" />\r\n    <option name=\"recentBranches\">\r\n      <RecentBranches>\r\n        <option name=\"branchesForRepo\">\r\n          <list>\r\n            <RecentBranchesForRepo>\r\n              <option name=\"branches\">\r\n                <list>\r\n                  <RecentBranch>\r\n                    <option name=\"branchName\" value=\"main\" />\r\n                    <option name=\"lastUsedInstant\" value=\"1711433269\" />\r\n                  </RecentBranch>\r\n                  <RecentBranch>\r\n                    <option name=\"branchName\" value=\"final-main\" />\r\n                    <option name=\"lastUsedInstant\" value=\"1711429780\" />\r\n                  </RecentBranch>\r\n                  <RecentBranch>\r\n                    <option name=\"branchName\" value=\"Board-refactor\" />\r\n                    <option name=\"lastUsedInstant\" value=\"1711429485\" />\r\n                  </RecentBranch>\r\n                  <RecentBranch>\r\n                    <option name=\"branchName\" value=\"Board\" />\r\n                    <option name=\"lastUsedInstant\" value=\"1711429402\" />\r\n                  </RecentBranch>\r\n                  <RecentBranch>\r\n                    <option name=\"branchName\" value=\"main-test\" />\r\n                    <option name=\"lastUsedInstant\" value=\"1711424890\" />\r\n                  </RecentBranch>\r\n                </list>\r\n              </option>\r\n              <option name=\"repositoryRootUrl\" value=\"file://$PROJECT_DIR$\" />\r\n            </RecentBranchesForRepo>\r\n          </list>\r\n        </option>\r\n      </RecentBranches>\r\n    </option>\r\n  </component>\r\n  <component name=\"GithubDefaultAccount\">\r\n    <option name=\"defaultAccountId\" value=\"52be4da8-aa2b-4ad2-a4da-5cc94e7dc925\" />\r\n  </component>\r\n  <component name=\"GithubPullRequestsUISettings\">\r\n    <option name=\"selectedUrlAndAccountId\">\r\n      <UrlAndAccount>\r\n        <option name=\"accountId\" value=\"52be4da8-aa2b-4ad2-a4da-5cc94e7dc925\" />\r\n        <option name=\"url\" value=\"https://github.com/beyond-sw-camp/be05-2nd-1team-BbaBap\" />\r\n      </UrlAndAccount>\r\n    </option>\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2daXnNNyti2ghZ6jFE6erdLf9SD\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,\r\n    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,\r\n    &quot;Git.Branch.Popup.ShowAllRemotes&quot;: &quot;true&quot;,\r\n    &quot;Gradle.BoardServiceTest.executor&quot;: &quot;Run&quot;,\r\n    &quot;Gradle.BoardTest.executor&quot;: &quot;Run&quot;,\r\n    &quot;Gradle.BoardTest.testCreateBoard.executor&quot;: &quot;Run&quot;,\r\n    &quot;Gradle.BoardTest.testDeleteBoard.executor&quot;: &quot;Run&quot;,\r\n    &quot;Gradle.BoardTest.testReadBoard.executor&quot;: &quot;Run&quot;,\r\n    &quot;Gradle.BoardTest.testUpdateBoard.executor&quot;: &quot;Run&quot;,\r\n    &quot;Gradle.UserTest.executor&quot;: &quot;Run&quot;,\r\n    &quot;Gradle.be05-2nd-1team-BbaBap 빌드.executor&quot;: &quot;Run&quot;,\r\n    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,\r\n    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,\r\n    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,\r\n    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,\r\n    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,\r\n    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,\r\n    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\r\n    &quot;Spring Boot.BabbapApplication.executor&quot;: &quot;Run&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,\r\n    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;refactoring&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/encore/IntelliJ_java_workspace/be05-2nd-1team-BbaBap&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\r\n    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,\r\n    &quot;project.structure.proportion&quot;: &quot;0.17&quot;,\r\n    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,\r\n    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,\r\n    &quot;spring.configuration.checksum&quot;: &quot;f4432b9cbd073c64a762787ed6b23638&quot;,\r\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\r\n  },\r\n  &quot;keyToStringList&quot;: {\r\n    &quot;DatabaseDriversLRU&quot;: [\r\n      &quot;mysql&quot;\r\n    ]\r\n  }\r\n}</component>\r\n  <component name=\"ReactorSettings\">\r\n    <option name=\"notificationShown\" value=\"true\" />\r\n  </component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CreateClassDialog.RecentsKey\">\r\n      <recent name=\"com.encore.bbabap.board\" />\r\n    </key>\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"$PROJECT_DIR$/src/main/java/com/encore/bbabap/domain/kakao\" />\r\n      <recent name=\"$PROJECT_DIR$/src/main/java/com/encore/bbabap/repository/kakao\" />\r\n      <recent name=\"$PROJECT_DIR$/src/main/java/com/encore/bbabap/api/kakao\" />\r\n      <recent name=\"$PROJECT_DIR$/src/test/java/com/encore/bbabap\" />\r\n      <recent name=\"$PROJECT_DIR$/src/main/java/com/encore/bbabap\" />\r\n    </key>\r\n    <key name=\"CreateTestDialog.Recents.Supers\">\r\n      <recent name=\"\" />\r\n    </key>\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"$PROJECT_DIR$/src/main/resources/templates\" />\r\n      <recent name=\"$PROJECT_DIR$/src/main/java/com/encore/bbabap/service/kakao\" />\r\n    </key>\r\n    <key name=\"CreateTestDialog.RecentsKey\">\r\n      <recent name=\"com.encore.bbabap.service.user\" />\r\n      <recent name=\"com.encore.bbabap.domain.user\" />\r\n      <recent name=\"com.encore.bbabap.domain.board\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunDashboard\">\r\n    <option name=\"configurationTypes\">\r\n      <set>\r\n        <option value=\"MicronautRunConfigurationType\" />\r\n        <option value=\"QuarkusRunConfigurationType\" />\r\n        <option value=\"SpringBootApplicationConfigurationType\" />\r\n      </set>\r\n    </option>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Gradle.BoardTest\">\r\n    <configuration name=\"BoardTest\" type=\"GradleRunConfiguration\" factoryName=\"Gradle\" temporary=\"true\">\r\n      <ExternalSystemSettings>\r\n        <option name=\"executionName\" />\r\n        <option name=\"externalProjectPath\" value=\"$PROJECT_DIR$\" />\r\n        <option name=\"externalSystemIdString\" value=\"GRADLE\" />\r\n        <option name=\"scriptParameters\" value=\"\" />\r\n        <option name=\"taskDescriptions\">\r\n          <list />\r\n        </option>\r\n        <option name=\"taskNames\">\r\n          <list>\r\n            <option value=\":test\" />\r\n            <option value=\"--tests\" />\r\n            <option value=\"&quot;com.encore.bbabap.domain.board.BoardTest&quot;\" />\r\n          </list>\r\n        </option>\r\n        <option name=\"vmOptions\" />\r\n      </ExternalSystemSettings>\r\n      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>\r\n      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>\r\n      <DebugAllEnabled>false</DebugAllEnabled>\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"BoardTest.testCreateBoard\" type=\"GradleRunConfiguration\" factoryName=\"Gradle\" temporary=\"true\">\r\n      <ExternalSystemSettings>\r\n        <option name=\"executionName\" />\r\n        <option name=\"externalProjectPath\" value=\"$PROJECT_DIR$\" />\r\n        <option name=\"externalSystemIdString\" value=\"GRADLE\" />\r\n        <option name=\"scriptParameters\" value=\"\" />\r\n        <option name=\"taskDescriptions\">\r\n          <list />\r\n        </option>\r\n        <option name=\"taskNames\">\r\n          <list>\r\n            <option value=\":test\" />\r\n            <option value=\"--tests\" />\r\n            <option value=\"&quot;com.encore.bbabap.domain.board.BoardTest.testCreateBoard&quot;\" />\r\n          </list>\r\n        </option>\r\n        <option name=\"vmOptions\" />\r\n      </ExternalSystemSettings>\r\n      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>\r\n      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>\r\n      <DebugAllEnabled>false</DebugAllEnabled>\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"BoardTest.testDeleteBoard\" type=\"GradleRunConfiguration\" factoryName=\"Gradle\" temporary=\"true\">\r\n      <ExternalSystemSettings>\r\n        <option name=\"executionName\" />\r\n        <option name=\"externalProjectPath\" value=\"$PROJECT_DIR$\" />\r\n        <option name=\"externalSystemIdString\" value=\"GRADLE\" />\r\n        <option name=\"scriptParameters\" value=\"\" />\r\n        <option name=\"taskDescriptions\">\r\n          <list />\r\n        </option>\r\n        <option name=\"taskNames\">\r\n          <list>\r\n            <option value=\":test\" />\r\n            <option value=\"--tests\" />\r\n            <option value=\"&quot;com.encore.bbabap.domain.board.BoardTest.testDeleteBoard&quot;\" />\r\n          </list>\r\n        </option>\r\n        <option name=\"vmOptions\" />\r\n      </ExternalSystemSettings>\r\n      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>\r\n      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>\r\n      <DebugAllEnabled>false</DebugAllEnabled>\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"BoardTest.testReadBoard\" type=\"GradleRunConfiguration\" factoryName=\"Gradle\" temporary=\"true\">\r\n      <ExternalSystemSettings>\r\n        <option name=\"executionName\" />\r\n        <option name=\"externalProjectPath\" value=\"$PROJECT_DIR$\" />\r\n        <option name=\"externalSystemIdString\" value=\"GRADLE\" />\r\n        <option name=\"scriptParameters\" value=\"\" />\r\n        <option name=\"taskDescriptions\">\r\n          <list />\r\n        </option>\r\n        <option name=\"taskNames\">\r\n          <list>\r\n            <option value=\":test\" />\r\n            <option value=\"--tests\" />\r\n            <option value=\"&quot;com.encore.bbabap.domain.board.BoardTest.testReadBoard&quot;\" />\r\n          </list>\r\n        </option>\r\n        <option name=\"vmOptions\" />\r\n      </ExternalSystemSettings>\r\n      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>\r\n      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>\r\n      <DebugAllEnabled>false</DebugAllEnabled>\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"BoardTest.testUpdateBoard\" type=\"GradleRunConfiguration\" factoryName=\"Gradle\" temporary=\"true\">\r\n      <ExternalSystemSettings>\r\n        <option name=\"executionName\" />\r\n        <option name=\"externalProjectPath\" value=\"$PROJECT_DIR$\" />\r\n        <option name=\"externalSystemIdString\" value=\"GRADLE\" />\r\n        <option name=\"scriptParameters\" value=\"\" />\r\n        <option name=\"taskDescriptions\">\r\n          <list />\r\n        </option>\r\n        <option name=\"taskNames\">\r\n          <list>\r\n            <option value=\":test\" />\r\n            <option value=\"--tests\" />\r\n            <option value=\"&quot;com.encore.bbabap.domain.board.BoardTest.testUpdateBoard&quot;\" />\r\n          </list>\r\n        </option>\r\n        <option name=\"vmOptions\" />\r\n      </ExternalSystemSettings>\r\n      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>\r\n      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>\r\n      <DebugAllEnabled>false</DebugAllEnabled>\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration default=\"true\" type=\"JetRunConfigurationType\">\r\n      <module name=\"be05-2nd-1team-BbaBap.test\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration default=\"true\" type=\"KotlinStandaloneScriptRunConfigurationType\">\r\n      <module name=\"be05-2nd-1team-BbaBap.test\" />\r\n      <option name=\"filePath\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"BabbapApplication\" type=\"SpringBootApplicationConfigurationType\" factoryName=\"Spring Boot\" nameIsGenerated=\"true\">\r\n      <module name=\"be05-2nd-1team-BbaBap.main\" />\r\n      <option name=\"SPRING_BOOT_MAIN_CLASS\" value=\"com.encore.bbabap.BabbapApplication\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <list>\r\n      <item itemvalue=\"Gradle.BoardTest\" />\r\n      <item itemvalue=\"Gradle.BoardTest.testCreateBoard\" />\r\n      <item itemvalue=\"Gradle.BoardTest.testDeleteBoard\" />\r\n      <item itemvalue=\"Gradle.BoardTest.testReadBoard\" />\r\n      <item itemvalue=\"Gradle.BoardTest.testUpdateBoard\" />\r\n      <item itemvalue=\"Spring Boot.BabbapApplication\" />\r\n    </list>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Gradle.BoardTest\" />\r\n        <item itemvalue=\"Gradle.BoardTest.testCreateBoard\" />\r\n        <item itemvalue=\"Gradle.BoardTest.testDeleteBoard\" />\r\n        <item itemvalue=\"Gradle.BoardTest.testUpdateBoard\" />\r\n        <item itemvalue=\"Gradle.BoardTest.testReadBoard\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"SvnConfiguration\">\r\n    <configuration>$USER_HOME$/.subversion</configuration>\r\n  </component>\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"d53b21e1-42f9-4465-afb3-b7b5ab54fc2d\" name=\"Changes\" comment=\"\" />\r\n      <created>1710247331027</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1710247331027</updated>\r\n      <workItem from=\"1710247333053\" duration=\"1185000\" />\r\n      <workItem from=\"1710339404102\" duration=\"804000\" />\r\n      <workItem from=\"1710404862095\" duration=\"6074000\" />\r\n      <workItem from=\"1710473625807\" duration=\"1001000\" />\r\n      <workItem from=\"1710513482291\" duration=\"1701000\" />\r\n      <workItem from=\"1710569549901\" duration=\"1883000\" />\r\n      <workItem from=\"1710928427281\" duration=\"1735000\" />\r\n      <workItem from=\"1710930700270\" duration=\"3298000\" />\r\n      <workItem from=\"1711087709239\" duration=\"6184000\" />\r\n      <workItem from=\"1711100110519\" duration=\"376000\" />\r\n      <workItem from=\"1711166312623\" duration=\"2444000\" />\r\n      <workItem from=\"1711211457583\" duration=\"1323000\" />\r\n      <workItem from=\"1711344899991\" duration=\"22706000\" />\r\n      <workItem from=\"1711421075414\" duration=\"1936000\" />\r\n      <workItem from=\"1711423442541\" duration=\"220000\" />\r\n      <workItem from=\"1711423668529\" duration=\"1535000\" />\r\n      <workItem from=\"1711429438675\" duration=\"2174000\" />\r\n      <workItem from=\"1711433122239\" duration=\"1839000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"test : git\">\r\n      <created>1710247503415</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1710247503415</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"test : commit to main\">\r\n      <created>1710407284830</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1710407284830</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"test : commit to main 2\">\r\n      <created>1710407845763</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1710407845763</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"Merge branch 'main' into zzimni&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/com/encore/bbabap/TestClass.java\">\r\n      <created>1710409686838</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1710409686838</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"test : git branch\">\r\n      <created>1710513782454</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1710513782454</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"test : git branch\">\r\n      <created>1710513853079</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1710513853079</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"feat : user login, register\">\r\n      <created>1710929167033</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1710929167033</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"add : user entity test code\">\r\n      <created>1710929252602</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1710929252602</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"refactor : remove @Setter, @ToString from user entity\">\r\n      <created>1711355332944</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1711355332944</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00010\" summary=\"refactor : remove @Setter, @ToString from user entity\">\r\n      <created>1711355745991</created>\r\n      <option name=\"number\" value=\"00010\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1711355745991</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00011\" summary=\"refactor : test\">\r\n      <created>1711356243353</created>\r\n      <option name=\"number\" value=\"00011\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1711356243353</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00012\" summary=\"refactor : git test\">\r\n      <created>1711356476154</created>\r\n      <option name=\"number\" value=\"00012\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00012\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1711356476154</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00013\" summary=\"test : git test\">\r\n      <created>1711361701393</created>\r\n      <option name=\"number\" value=\"00013\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00013\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1711361701393</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00014\" summary=\"refactor : user test 패키조 구조\">\r\n      <created>1711379221279</created>\r\n      <option name=\"number\" value=\"00014\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00014\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1711379221279</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00015\" summary=\"refactor : user test 패키조 구조, 삭제\">\r\n      <created>1711380399259</created>\r\n      <option name=\"number\" value=\"00015\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00015\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1711380399259</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00016\" summary=\"refactor : user test 패키조 구조, 삭제\">\r\n      <created>1711423531977</created>\r\n      <option name=\"number\" value=\"00016\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00016\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1711423531977</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00017\" summary=\"refactor : db password change\">\r\n      <created>1711433144780</created>\r\n      <option name=\"number\" value=\"00017\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00017\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1711433144780</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"18\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State>\r\n              <option name=\"FILTERS\">\r\n                <map>\r\n                  <entry key=\"branch\">\r\n                    <value>\r\n                      <list>\r\n                        <option value=\"origin/main\" />\r\n                      </list>\r\n                    </value>\r\n                  </entry>\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"test : git\" />\r\n    <MESSAGE value=\"test : commit to main\" />\r\n    <MESSAGE value=\"test : commit to main 2\" />\r\n    <MESSAGE value=\"Merge branch 'main' into zzimni&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/com/encore/bbabap/TestClass.java\" />\r\n    <MESSAGE value=\"test : git branch\" />\r\n    <MESSAGE value=\"feat : user login, register\" />\r\n    <MESSAGE value=\"add : user entity test code\" />\r\n    <MESSAGE value=\"refactor : remove @Setter, @ToString from user entity\" />\r\n    <MESSAGE value=\"refactor : test\" />\r\n    <MESSAGE value=\"refactor : git test\" />\r\n    <MESSAGE value=\"test : git test\" />\r\n    <MESSAGE value=\"refactor : user test 패키조 구조\" />\r\n    <MESSAGE value=\"refactor : user test 패키조 구조, 삭제\" />\r\n    <MESSAGE value=\"refactor : db password change\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"refactor : db password change\" />\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <breakpoint-manager>\r\n      <breakpoints>\r\n        <breakpoint enabled=\"true\" type=\"java-exception\">\r\n          <properties class=\"java.lang.RuntimeException\" package=\"java.lang\" />\r\n          <option name=\"timeStamp\" value=\"4\" />\r\n        </breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/main/java/com/encore/bbabap/config/SecurityUtils.java</url>\r\n          <line>11</line>\r\n          <option name=\"timeStamp\" value=\"8\" />\r\n        </line-breakpoint>\r\n      </breakpoints>\r\n    </breakpoint-manager>\r\n  </component>\r\n  <component name=\"XSLT-Support.FileAssociations.UIState\">\r\n    <expand />\r\n    <select />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -1,591 +1,598 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+-  <component name="AutoImportSettings">
+-    <option name="autoReloadType" value="SELECTIVE" />
+-  </component>
+-  <component name="ChangeListManager">
+-    <list default="true" id="d53b21e1-42f9-4465-afb3-b7b5ab54fc2d" name="Changes" comment="댓글 삭제여부 추가 + 삭제된 댓글 조회 안되게 처리 &amp; 서버시간 서울로 변경">
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2024-03-20__3_19__________.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2024-03-20__3_19__________.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2024-03-26__4_15_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2024-03-26__4_15_________Changes_.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-    </list>
+-    <option name="SHOW_DIALOG" value="false" />
+-    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+-    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+-    <option name="LAST_RESOLUTION" value="IGNORE" />
+-  </component>
+-  <component name="ExternalProjectsData">
+-    <projectState path="$PROJECT_DIR$">
+-      <ProjectState />
+-    </projectState>
+-    <projectState path="$PROJECT_DIR$/kakaomaptest">
+-      <ProjectState />
+-    </projectState>
+-  </component>
+-  <component name="ExternalProjectsManager">
+-    <system id="GRADLE">
+-      <state>
+-        <task path="$PROJECT_DIR$">
+-          <activation />
+-        </task>
+-        <projects_view>
+-          <tree_state>
+-            <expand>
+-              <path>
+-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+-                <item name="Bbabap_pjt" type="f1a62948:ProjectNode" />
+-              </path>
+-              <path>
+-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+-                <item name="Bbabap_pjt" type="f1a62948:ProjectNode" />
+-                <item name="Tasks" type="e4a08cd1:TasksNode" />
+-              </path>
+-              <path>
+-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+-                <item name="Bbabap_pjt" type="f1a62948:ProjectNode" />
+-                <item name="Tasks" type="e4a08cd1:TasksNode" />
+-                <item name="build" type="c8890929:TasksNode$1" />
+-              </path>
+-            </expand>
+-            <select />
+-          </tree_state>
+-        </projects_view>
+-      </state>
+-    </system>
+-  </component>
+-  <component name="FileTemplateManagerImpl">
+-    <option name="RECENT_TEMPLATES">
+-      <list>
+-        <option value="JUnit5 Test Class" />
+-        <option value="HTML File" />
+-        <option value="AnnotationType" />
+-        <option value="Class" />
+-      </list>
+-    </option>
+-  </component>
+-  <component name="Git.Settings">
+-    <option name="RECENT_BRANCH_BY_REPOSITORY">
+-      <map>
+-        <entry key="$PROJECT_DIR$" value="refactoring" />
+-      </map>
+-    </option>
+-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+-  </component>
+-  <component name="GitHubPullRequestSearchHistory">{
+-  &quot;lastFilter&quot;: {
+-    &quot;state&quot;: &quot;OPEN&quot;,
+-    &quot;assignee&quot;: &quot;zzimni&quot;
+-  }
+-}</component>
+-  <component name="GitToolBoxStore">
+-    <option name="projectConfigVersion" value="5" />
+-    <option name="recentBranches">
+-      <RecentBranches>
+-        <option name="branchesForRepo">
+-          <list>
+-            <RecentBranchesForRepo>
+-              <option name="branches">
+-                <list>
+-                  <RecentBranch>
+-                    <option name="branchName" value="main" />
+-                    <option name="lastUsedInstant" value="1711433269" />
+-                  </RecentBranch>
+-                  <RecentBranch>
+-                    <option name="branchName" value="final-main" />
+-                    <option name="lastUsedInstant" value="1711429780" />
+-                  </RecentBranch>
+-                  <RecentBranch>
+-                    <option name="branchName" value="Board-refactor" />
+-                    <option name="lastUsedInstant" value="1711429485" />
+-                  </RecentBranch>
+-                  <RecentBranch>
+-                    <option name="branchName" value="Board" />
+-                    <option name="lastUsedInstant" value="1711429402" />
+-                  </RecentBranch>
+-                  <RecentBranch>
+-                    <option name="branchName" value="main-test" />
+-                    <option name="lastUsedInstant" value="1711424890" />
+-                  </RecentBranch>
+-                </list>
+-              </option>
+-              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+-            </RecentBranchesForRepo>
+-          </list>
+-        </option>
+-      </RecentBranches>
+-    </option>
+-  </component>
+-  <component name="GithubDefaultAccount">
+-    <option name="defaultAccountId" value="52be4da8-aa2b-4ad2-a4da-5cc94e7dc925" />
+-  </component>
+-  <component name="GithubPullRequestsUISettings">
+-    <option name="selectedUrlAndAccountId">
+-      <UrlAndAccount>
+-        <option name="accountId" value="52be4da8-aa2b-4ad2-a4da-5cc94e7dc925" />
+-        <option name="url" value="https://github.com/beyond-sw-camp/be05-2nd-1team-BbaBap" />
+-      </UrlAndAccount>
+-    </option>
+-  </component>
+-  <component name="MarkdownSettingsMigration">
+-    <option name="stateVersion" value="1" />
+-  </component>
+-  <component name="ProjectId" id="2daXnNNyti2ghZ6jFE6erdLf9SD" />
+-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+-    <ConfirmationsSetting value="2" id="Add" />
+-  </component>
+-  <component name="ProjectViewState">
+-    <option name="hideEmptyMiddlePackages" value="true" />
+-    <option name="showLibraryContents" value="true" />
+-  </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+-    &quot;Git.Branch.Popup.ShowAllRemotes&quot;: &quot;true&quot;,
+-    &quot;Gradle.BoardServiceTest.executor&quot;: &quot;Run&quot;,
+-    &quot;Gradle.BoardTest.executor&quot;: &quot;Run&quot;,
+-    &quot;Gradle.BoardTest.testCreateBoard.executor&quot;: &quot;Run&quot;,
+-    &quot;Gradle.BoardTest.testDeleteBoard.executor&quot;: &quot;Run&quot;,
+-    &quot;Gradle.BoardTest.testReadBoard.executor&quot;: &quot;Run&quot;,
+-    &quot;Gradle.BoardTest.testUpdateBoard.executor&quot;: &quot;Run&quot;,
+-    &quot;Gradle.UserTest.executor&quot;: &quot;Run&quot;,
+-    &quot;Gradle.be05-2nd-1team-BbaBap 빌드.executor&quot;: &quot;Run&quot;,
+-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+-    &quot;Spring Boot.BabbapApplication.executor&quot;: &quot;Run&quot;,
+-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+-    &quot;git-widget-placeholder&quot;: &quot;refactoring&quot;,
+-    &quot;last_opened_file_path&quot;: &quot;C:/encore/IntelliJ_java_workspace/be05-2nd-1team-BbaBap&quot;,
+-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+-    &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
+-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+-    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
+-    &quot;spring.configuration.checksum&quot;: &quot;f4432b9cbd073c64a762787ed6b23638&quot;,
+-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+-  },
+-  &quot;keyToStringList&quot;: {
+-    &quot;DatabaseDriversLRU&quot;: [
+-      &quot;mysql&quot;
+-    ]
+-  }
+-}</component>
+-  <component name="ReactorSettings">
+-    <option name="notificationShown" value="true" />
+-  </component>
+-  <component name="RecentsManager">
+-    <key name="CreateClassDialog.RecentsKey">
+-      <recent name="com.encore.bbabap.board" />
+-    </key>
+-    <key name="CopyFile.RECENT_KEYS">
+-      <recent name="$PROJECT_DIR$/src/main/java/com/encore/bbabap/domain/kakao" />
+-      <recent name="$PROJECT_DIR$/src/main/java/com/encore/bbabap/repository/kakao" />
+-      <recent name="$PROJECT_DIR$/src/main/java/com/encore/bbabap/api/kakao" />
+-      <recent name="$PROJECT_DIR$/src/test/java/com/encore/bbabap" />
+-      <recent name="$PROJECT_DIR$/src/main/java/com/encore/bbabap" />
+-    </key>
+-    <key name="CreateTestDialog.Recents.Supers">
+-      <recent name="" />
+-    </key>
+-    <key name="MoveFile.RECENT_KEYS">
+-      <recent name="$PROJECT_DIR$/src/main/resources/templates" />
+-      <recent name="$PROJECT_DIR$/src/main/java/com/encore/bbabap/service/kakao" />
+-    </key>
+-    <key name="CreateTestDialog.RecentsKey">
+-      <recent name="com.encore.bbabap.service.user" />
+-      <recent name="com.encore.bbabap.domain.user" />
+-      <recent name="com.encore.bbabap.domain.board" />
+-    </key>
+-  </component>
+-  <component name="RunDashboard">
+-    <option name="configurationTypes">
+-      <set>
+-        <option value="MicronautRunConfigurationType" />
+-        <option value="QuarkusRunConfigurationType" />
+-        <option value="SpringBootApplicationConfigurationType" />
+-      </set>
+-    </option>
+-  </component>
+-  <component name="RunManager" selected="Gradle.BoardTest">
+-    <configuration name="BoardTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+-      <ExternalSystemSettings>
+-        <option name="executionName" />
+-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+-        <option name="externalSystemIdString" value="GRADLE" />
+-        <option name="scriptParameters" value="" />
+-        <option name="taskDescriptions">
+-          <list />
+-        </option>
+-        <option name="taskNames">
+-          <list>
+-            <option value=":test" />
+-            <option value="--tests" />
+-            <option value="&quot;com.encore.bbabap.domain.board.BoardTest&quot;" />
+-          </list>
+-        </option>
+-        <option name="vmOptions" />
+-      </ExternalSystemSettings>
+-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+-      <DebugAllEnabled>false</DebugAllEnabled>
+-      <method v="2" />
+-    </configuration>
+-    <configuration name="BoardTest.testCreateBoard" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+-      <ExternalSystemSettings>
+-        <option name="executionName" />
+-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+-        <option name="externalSystemIdString" value="GRADLE" />
+-        <option name="scriptParameters" value="" />
+-        <option name="taskDescriptions">
+-          <list />
+-        </option>
+-        <option name="taskNames">
+-          <list>
+-            <option value=":test" />
+-            <option value="--tests" />
+-            <option value="&quot;com.encore.bbabap.domain.board.BoardTest.testCreateBoard&quot;" />
+-          </list>
+-        </option>
+-        <option name="vmOptions" />
+-      </ExternalSystemSettings>
+-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+-      <DebugAllEnabled>false</DebugAllEnabled>
+-      <method v="2" />
+-    </configuration>
+-    <configuration name="BoardTest.testDeleteBoard" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+-      <ExternalSystemSettings>
+-        <option name="executionName" />
+-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+-        <option name="externalSystemIdString" value="GRADLE" />
+-        <option name="scriptParameters" value="" />
+-        <option name="taskDescriptions">
+-          <list />
+-        </option>
+-        <option name="taskNames">
+-          <list>
+-            <option value=":test" />
+-            <option value="--tests" />
+-            <option value="&quot;com.encore.bbabap.domain.board.BoardTest.testDeleteBoard&quot;" />
+-          </list>
+-        </option>
+-        <option name="vmOptions" />
+-      </ExternalSystemSettings>
+-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+-      <DebugAllEnabled>false</DebugAllEnabled>
+-      <method v="2" />
+-    </configuration>
+-    <configuration name="BoardTest.testReadBoard" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+-      <ExternalSystemSettings>
+-        <option name="executionName" />
+-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+-        <option name="externalSystemIdString" value="GRADLE" />
+-        <option name="scriptParameters" value="" />
+-        <option name="taskDescriptions">
+-          <list />
+-        </option>
+-        <option name="taskNames">
+-          <list>
+-            <option value=":test" />
+-            <option value="--tests" />
+-            <option value="&quot;com.encore.bbabap.domain.board.BoardTest.testReadBoard&quot;" />
+-          </list>
+-        </option>
+-        <option name="vmOptions" />
+-      </ExternalSystemSettings>
+-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+-      <DebugAllEnabled>false</DebugAllEnabled>
+-      <method v="2" />
+-    </configuration>
+-    <configuration name="BoardTest.testUpdateBoard" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+-      <ExternalSystemSettings>
+-        <option name="executionName" />
+-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+-        <option name="externalSystemIdString" value="GRADLE" />
+-        <option name="scriptParameters" value="" />
+-        <option name="taskDescriptions">
+-          <list />
+-        </option>
+-        <option name="taskNames">
+-          <list>
+-            <option value=":test" />
+-            <option value="--tests" />
+-            <option value="&quot;com.encore.bbabap.domain.board.BoardTest.testUpdateBoard&quot;" />
+-          </list>
+-        </option>
+-        <option name="vmOptions" />
+-      </ExternalSystemSettings>
+-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+-      <DebugAllEnabled>false</DebugAllEnabled>
+-      <method v="2" />
+-    </configuration>
+-    <configuration default="true" type="JetRunConfigurationType">
+-      <module name="be05-2nd-1team-BbaBap.test" />
+-      <method v="2">
+-        <option name="Make" enabled="true" />
+-      </method>
+-    </configuration>
+-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+-      <module name="be05-2nd-1team-BbaBap.test" />
+-      <option name="filePath" />
+-      <method v="2">
+-        <option name="Make" enabled="true" />
+-      </method>
+-    </configuration>
+-    <configuration name="BabbapApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+-      <module name="be05-2nd-1team-BbaBap.main" />
+-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.encore.bbabap.BabbapApplication" />
+-      <method v="2">
+-        <option name="Make" enabled="true" />
+-      </method>
+-    </configuration>
+-    <list>
+-      <item itemvalue="Gradle.BoardTest" />
+-      <item itemvalue="Gradle.BoardTest.testCreateBoard" />
+-      <item itemvalue="Gradle.BoardTest.testDeleteBoard" />
+-      <item itemvalue="Gradle.BoardTest.testReadBoard" />
+-      <item itemvalue="Gradle.BoardTest.testUpdateBoard" />
+-      <item itemvalue="Spring Boot.BabbapApplication" />
+-    </list>
+-    <recent_temporary>
+-      <list>
+-        <item itemvalue="Gradle.BoardTest" />
+-        <item itemvalue="Gradle.BoardTest.testCreateBoard" />
+-        <item itemvalue="Gradle.BoardTest.testDeleteBoard" />
+-        <item itemvalue="Gradle.BoardTest.testUpdateBoard" />
+-        <item itemvalue="Gradle.BoardTest.testReadBoard" />
+-      </list>
+-    </recent_temporary>
+-  </component>
+-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+-  <component name="SvnConfiguration">
+-    <configuration>$USER_HOME$/.subversion</configuration>
+-  </component>
+-  <component name="TaskManager">
+-    <task active="true" id="Default" summary="Default task">
+-      <changelist id="d53b21e1-42f9-4465-afb3-b7b5ab54fc2d" name="Changes" comment="" />
+-      <created>1710247331027</created>
+-      <option name="number" value="Default" />
+-      <option name="presentableId" value="Default" />
+-      <updated>1710247331027</updated>
+-      <workItem from="1710247333053" duration="1185000" />
+-      <workItem from="1710339404102" duration="804000" />
+-      <workItem from="1710404862095" duration="6074000" />
+-      <workItem from="1710473625807" duration="1001000" />
+-      <workItem from="1710513482291" duration="1701000" />
+-      <workItem from="1710569549901" duration="1883000" />
+-      <workItem from="1710928427281" duration="1735000" />
+-      <workItem from="1710930700270" duration="3298000" />
+-      <workItem from="1711087709239" duration="6184000" />
+-      <workItem from="1711100110519" duration="376000" />
+-      <workItem from="1711166312623" duration="2444000" />
+-      <workItem from="1711211457583" duration="1323000" />
+-      <workItem from="1711344899991" duration="22706000" />
+-      <workItem from="1711421075414" duration="1936000" />
+-      <workItem from="1711423442541" duration="220000" />
+-      <workItem from="1711423668529" duration="1535000" />
+-      <workItem from="1711429438675" duration="2174000" />
+-      <workItem from="1711433122239" duration="1839000" />
+-    </task>
+-    <task id="LOCAL-00001" summary="test : git">
+-      <created>1710247503415</created>
+-      <option name="number" value="00001" />
+-      <option name="presentableId" value="LOCAL-00001" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1710247503415</updated>
+-    </task>
+-    <task id="LOCAL-00002" summary="test : commit to main">
+-      <created>1710407284830</created>
+-      <option name="number" value="00002" />
+-      <option name="presentableId" value="LOCAL-00002" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1710407284830</updated>
+-    </task>
+-    <task id="LOCAL-00003" summary="test : commit to main 2">
+-      <created>1710407845763</created>
+-      <option name="number" value="00003" />
+-      <option name="presentableId" value="LOCAL-00003" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1710407845763</updated>
+-    </task>
+-    <task id="LOCAL-00004" summary="Merge branch 'main' into zzimni&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/com/encore/bbabap/TestClass.java">
+-      <created>1710409686838</created>
+-      <option name="number" value="00004" />
+-      <option name="presentableId" value="LOCAL-00004" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1710409686838</updated>
+-    </task>
+-    <task id="LOCAL-00005" summary="test : git branch">
+-      <created>1710513782454</created>
+-      <option name="number" value="00005" />
+-      <option name="presentableId" value="LOCAL-00005" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1710513782454</updated>
+-    </task>
+-    <task id="LOCAL-00006" summary="test : git branch">
+-      <created>1710513853079</created>
+-      <option name="number" value="00006" />
+-      <option name="presentableId" value="LOCAL-00006" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1710513853079</updated>
+-    </task>
+-    <task id="LOCAL-00007" summary="feat : user login, register">
+-      <created>1710929167033</created>
+-      <option name="number" value="00007" />
+-      <option name="presentableId" value="LOCAL-00007" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1710929167033</updated>
+-    </task>
+-    <task id="LOCAL-00008" summary="add : user entity test code">
+-      <created>1710929252602</created>
+-      <option name="number" value="00008" />
+-      <option name="presentableId" value="LOCAL-00008" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1710929252602</updated>
+-    </task>
+-    <task id="LOCAL-00009" summary="refactor : remove @Setter, @ToString from user entity">
+-      <created>1711355332944</created>
+-      <option name="number" value="00009" />
+-      <option name="presentableId" value="LOCAL-00009" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1711355332944</updated>
+-    </task>
+-    <task id="LOCAL-00010" summary="refactor : remove @Setter, @ToString from user entity">
+-      <created>1711355745991</created>
+-      <option name="number" value="00010" />
+-      <option name="presentableId" value="LOCAL-00010" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1711355745991</updated>
+-    </task>
+-    <task id="LOCAL-00011" summary="refactor : test">
+-      <created>1711356243353</created>
+-      <option name="number" value="00011" />
+-      <option name="presentableId" value="LOCAL-00011" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1711356243353</updated>
+-    </task>
+-    <task id="LOCAL-00012" summary="refactor : git test">
+-      <created>1711356476154</created>
+-      <option name="number" value="00012" />
+-      <option name="presentableId" value="LOCAL-00012" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1711356476154</updated>
+-    </task>
+-    <task id="LOCAL-00013" summary="test : git test">
+-      <created>1711361701393</created>
+-      <option name="number" value="00013" />
+-      <option name="presentableId" value="LOCAL-00013" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1711361701393</updated>
+-    </task>
+-    <task id="LOCAL-00014" summary="refactor : user test 패키조 구조">
+-      <created>1711379221279</created>
+-      <option name="number" value="00014" />
+-      <option name="presentableId" value="LOCAL-00014" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1711379221279</updated>
+-    </task>
+-    <task id="LOCAL-00015" summary="refactor : user test 패키조 구조, 삭제">
+-      <created>1711380399259</created>
+-      <option name="number" value="00015" />
+-      <option name="presentableId" value="LOCAL-00015" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1711380399259</updated>
+-    </task>
+-    <task id="LOCAL-00016" summary="refactor : user test 패키조 구조, 삭제">
+-      <created>1711423531977</created>
+-      <option name="number" value="00016" />
+-      <option name="presentableId" value="LOCAL-00016" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1711423531977</updated>
+-    </task>
+-    <task id="LOCAL-00017" summary="refactor : db password change">
+-      <created>1711433144780</created>
+-      <option name="number" value="00017" />
+-      <option name="presentableId" value="LOCAL-00017" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1711433144780</updated>
+-    </task>
+-    <option name="localTasksCounter" value="18" />
+-    <servers />
+-  </component>
+-  <component name="TypeScriptGeneratedFilesManager">
+-    <option name="version" value="3" />
+-  </component>
+-  <component name="Vcs.Log.Tabs.Properties">
+-    <option name="TAB_STATES">
+-      <map>
+-        <entry key="MAIN">
+-          <value>
+-            <State>
+-              <option name="FILTERS">
+-                <map>
+-                  <entry key="branch">
+-                    <value>
+-                      <list>
+-                        <option value="origin/main" />
+-                      </list>
+-                    </value>
+-                  </entry>
+-                </map>
+-              </option>
+-            </State>
+-          </value>
+-        </entry>
+-      </map>
+-    </option>
+-  </component>
+-  <component name="VcsManagerConfiguration">
+-    <MESSAGE value="test : git" />
+-    <MESSAGE value="test : commit to main" />
+-    <MESSAGE value="test : commit to main 2" />
+-    <MESSAGE value="Merge branch 'main' into zzimni&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/com/encore/bbabap/TestClass.java" />
+-    <MESSAGE value="test : git branch" />
+-    <MESSAGE value="feat : user login, register" />
+-    <MESSAGE value="add : user entity test code" />
+-    <MESSAGE value="refactor : remove @Setter, @ToString from user entity" />
+-    <MESSAGE value="refactor : test" />
+-    <MESSAGE value="refactor : git test" />
+-    <MESSAGE value="test : git test" />
+-    <MESSAGE value="refactor : user test 패키조 구조" />
+-    <MESSAGE value="refactor : user test 패키조 구조, 삭제" />
+-    <MESSAGE value="refactor : db password change" />
+-    <option name="LAST_COMMIT_MESSAGE" value="refactor : db password change" />
+-  </component>
+-  <component name="XDebuggerManager">
+-    <breakpoint-manager>
+-      <breakpoints>
+-        <breakpoint enabled="true" type="java-exception">
+-          <properties class="java.lang.RuntimeException" package="java.lang" />
+-          <option name="timeStamp" value="4" />
+-        </breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/main/java/com/encore/bbabap/config/SecurityUtils.java</url>
+-          <line>11</line>
+-          <option name="timeStamp" value="8" />
+-        </line-breakpoint>
+-      </breakpoints>
+-    </breakpoint-manager>
+-  </component>
+-  <component name="XSLT-Support.FileAssociations.UIState">
+-    <expand />
+-    <select />
+-  </component>
++    <component name="AutoImportSettings">
++        <option name="autoReloadType" value="SELECTIVE"/>
++    </component>
++    <component name="ChangeListManager">
++        <list default="true" id="d53b21e1-42f9-4465-afb3-b7b5ab54fc2d" name="Changes"
++              comment="댓글 삭제여부 추가 + 삭제된 댓글 조회 안되게 처리 &amp; 서버시간 서울로 변경">
++            <change beforePath="$PROJECT_DIR$/.idea/shelf/2024-03-20__3_19__________.xml" beforeDir="false"
++                    afterPath="$PROJECT_DIR$/.idea/shelf/2024-03-20__3_19__________.xml" afterDir="false"/>
++            <change beforePath="$PROJECT_DIR$/.idea/shelf/2024-03-26__4_15_________Changes_.xml" beforeDir="false"
++                    afterPath="$PROJECT_DIR$/.idea/shelf/2024-03-26__4_15_________Changes_.xml" afterDir="false"/>
++            <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false"
++                    afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false"/>
++        </list>
++        <option name="SHOW_DIALOG" value="false"/>
++        <option name="HIGHLIGHT_CONFLICTS" value="true"/>
++        <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false"/>
++        <option name="LAST_RESOLUTION" value="IGNORE"/>
++    </component>
++    <component name="ExternalProjectsData">
++        <projectState path="$PROJECT_DIR$">
++            <ProjectState/>
++        </projectState>
++        <projectState path="$PROJECT_DIR$/kakaomaptest">
++            <ProjectState/>
++        </projectState>
++    </component>
++    <component name="ExternalProjectsManager">
++        <system id="GRADLE">
++            <state>
++                <task path="$PROJECT_DIR$">
++                    <activation/>
++                </task>
++                <projects_view>
++                    <tree_state>
++                        <expand>
++                            <path>
++                                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode"/>
++                                <item name="Bbabap_pjt" type="f1a62948:ProjectNode"/>
++                            </path>
++                            <path>
++                                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode"/>
++                                <item name="Bbabap_pjt" type="f1a62948:ProjectNode"/>
++                                <item name="Tasks" type="e4a08cd1:TasksNode"/>
++                            </path>
++                            <path>
++                                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode"/>
++                                <item name="Bbabap_pjt" type="f1a62948:ProjectNode"/>
++                                <item name="Tasks" type="e4a08cd1:TasksNode"/>
++                                <item name="build" type="c8890929:TasksNode$1"/>
++                            </path>
++                        </expand>
++                        <select/>
++                    </tree_state>
++                </projects_view>
++            </state>
++        </system>
++    </component>
++    <component name="FileTemplateManagerImpl">
++        <option name="RECENT_TEMPLATES">
++            <list>
++                <option value="JUnit5 Test Class"/>
++                <option value="HTML File"/>
++                <option value="AnnotationType"/>
++                <option value="Class"/>
++            </list>
++        </option>
++    </component>
++    <component name="Git.Settings">
++        <option name="RECENT_BRANCH_BY_REPOSITORY">
++            <map>
++                <entry key="$PROJECT_DIR$" value="refactoring"/>
++            </map>
++        </option>
++        <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$"/>
++    </component>
++    <component name="GitHubPullRequestSearchHistory">{
++        &quot;lastFilter&quot;: {
++        &quot;state&quot;: &quot;OPEN&quot;,
++        &quot;assignee&quot;: &quot;zzimni&quot;
++        }
++        }
++    </component>
++    <component name="GitToolBoxStore">
++        <option name="projectConfigVersion" value="5"/>
++        <option name="recentBranches">
++            <RecentBranches>
++                <option name="branchesForRepo">
++                    <list>
++                        <RecentBranchesForRepo>
++                            <option name="branches">
++                                <list>
++                                    <RecentBranch>
++                                        <option name="branchName" value="main"/>
++                                        <option name="lastUsedInstant" value="1711433269"/>
++                                    </RecentBranch>
++                                    <RecentBranch>
++                                        <option name="branchName" value="final-main"/>
++                                        <option name="lastUsedInstant" value="1711429780"/>
++                                    </RecentBranch>
++                                    <RecentBranch>
++                                        <option name="branchName" value="Board-refactor"/>
++                                        <option name="lastUsedInstant" value="1711429485"/>
++                                    </RecentBranch>
++                                    <RecentBranch>
++                                        <option name="branchName" value="Board"/>
++                                        <option name="lastUsedInstant" value="1711429402"/>
++                                    </RecentBranch>
++                                    <RecentBranch>
++                                        <option name="branchName" value="main-test"/>
++                                        <option name="lastUsedInstant" value="1711424890"/>
++                                    </RecentBranch>
++                                </list>
++                            </option>
++                            <option name="repositoryRootUrl" value="file://$PROJECT_DIR$"/>
++                        </RecentBranchesForRepo>
++                    </list>
++                </option>
++            </RecentBranches>
++        </option>
++    </component>
++    <component name="GithubDefaultAccount">
++        <option name="defaultAccountId" value="52be4da8-aa2b-4ad2-a4da-5cc94e7dc925"/>
++    </component>
++    <component name="GithubPullRequestsUISettings">
++        <option name="selectedUrlAndAccountId">
++            <UrlAndAccount>
++                <option name="accountId" value="52be4da8-aa2b-4ad2-a4da-5cc94e7dc925"/>
++                <option name="url" value="https://github.com/beyond-sw-camp/be05-2nd-1team-BbaBap"/>
++            </UrlAndAccount>
++        </option>
++    </component>
++    <component name="MarkdownSettingsMigration">
++        <option name="stateVersion" value="1"/>
++    </component>
++    <component name="ProjectId" id="2daXnNNyti2ghZ6jFE6erdLf9SD"/>
++    <component name="ProjectLevelVcsManager" settingsEditedManually="true">
++        <ConfirmationsSetting value="2" id="Add"/>
++    </component>
++    <component name="ProjectViewState">
++        <option name="hideEmptyMiddlePackages" value="true"/>
++        <option name="showLibraryContents" value="true"/>
++    </component>
++    <component name="PropertiesComponent">{
++        &quot;keyToString&quot;: {
++        &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
++
++        &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
++        &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
++        &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
++        &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
++        &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
++        &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++        &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
++        &quot;Spring Boot.BabbapApplication.executor&quot;: &quot;Run&quot;,
++        &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
++        &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
++        &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
++        &quot;git-widget-placeholder&quot;: &quot;refactoring&quot;,
++        &quot;last_opened_file_path&quot;: &quot;C:/encore/IntelliJ_java_workspace/be05-2nd-1team-BbaBap&quot;,
++        &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
++        &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
++        &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
++        &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
++        &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
++        &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
++        &quot;git-widget-placeholder&quot;: &quot;refactoring-zn&quot;,
++        &quot;last_opened_file_path&quot;: &quot;/Users/dongwook/Desktop/study/study/be05-2nd-1team-BbaBap/src/main/java/com/encore/bbabap/domain/kakao&quot;,
++        &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
++        &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
++        &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
++        &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
++        &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
++        &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
++        &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
++        &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
++        &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;,
++        &quot;spring.configuration.checksum&quot;: &quot;f4432b9cbd073c64a762787ed6b23638&quot;,
++        &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
++        },
++        &quot;keyToStringList&quot;: {
++        &quot;DatabaseDriversLRU&quot;: [
++        &quot;mysql&quot;
++        ]
++        }
++        }
++    </component>
++    <component name="RecentsManager">
++        <key name="CreateClassDialog.RecentsKey">
++            <recent name="com.encore.bbabap.board"/>
++        </key>
++        <key name="CopyFile.RECENT_KEYS">
++            <recent name="$PROJECT_DIR$/src/main/java/com/encore/bbabap/domain/kakao"/>
++            <recent name="$PROJECT_DIR$/src/main/java/com/encore/bbabap/repository/kakao"/>
++            <recent name="$PROJECT_DIR$/src/main/java/com/encore/bbabap/api/kakao"/>
++            <recent name="$PROJECT_DIR$/src/test/java/com/encore/bbabap"/>
++            <recent name="$PROJECT_DIR$/src/main/java/com/encore/bbabap"/>
++        </key>
++        <key name="CreateTestDialog.Recents.Supers">
++            <recent name=""/>
++        </key>
++        <key name="MoveFile.RECENT_KEYS">
++            <recent name="$PROJECT_DIR$/src/main/resources/templates"/>
++            <recent name="$PROJECT_DIR$/src/main/java/com/encore/bbabap/service/kakao"/>
++        </key>
++        <key name="CreateTestDialog.RecentsKey">
++            <recent name="com.encore.bbabap.service.user"/>
++            <recent name="com.encore.bbabap.domain.user"/>
++            <recent name="com.encore.bbabap.domain.board"/>
++        </key>
++    </component>
++    <component name="RunDashboard">
++        <option name="configurationTypes">
++            <set>
++                <option value="MicronautRunConfigurationType"/>
++                <option value="QuarkusRunConfigurationType"/>
++                <option value="SpringBootApplicationConfigurationType"/>
++            </set>
++        </option>
++    </component>
++    <component name="RunManager" selected="Gradle.BoardTest">
++        <configuration name="BoardTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
++            <ExternalSystemSettings>
++                <option name="executionName"/>
++                <option name="externalProjectPath" value="$PROJECT_DIR$"/>
++                <option name="externalSystemIdString" value="GRADLE"/>
++                <option name="scriptParameters" value=""/>
++                <option name="taskDescriptions">
++                    <list/>
++                </option>
++                <option name="taskNames">
++                    <list>
++                        <option value=":test"/>
++                        <option value="--tests"/>
++                        <option value="&quot;com.encore.bbabap.domain.board.BoardTest&quot;"/>
++                    </list>
++                </option>
++                <option name="vmOptions"/>
++            </ExternalSystemSettings>
++            <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
++            <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
++            <DebugAllEnabled>false</DebugAllEnabled>
++            <method v="2"/>
++        </configuration>
++        <configuration name="BoardTest.testCreateBoard" type="GradleRunConfiguration" factoryName="Gradle"
++                       temporary="true">
++            <ExternalSystemSettings>
++                <option name="executionName"/>
++                <option name="externalProjectPath" value="$PROJECT_DIR$"/>
++                <option name="externalSystemIdString" value="GRADLE"/>
++                <option name="scriptParameters" value=""/>
++                <option name="taskDescriptions">
++                    <list/>
++                </option>
++                <option name="taskNames">
++                    <list>
++                        <option value=":test"/>
++                        <option value="--tests"/>
++                        <option value="&quot;com.encore.bbabap.domain.board.BoardTest.testCreateBoard&quot;"/>
++                    </list>
++                </option>
++                <option name="vmOptions"/>
++            </ExternalSystemSettings>
++            <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
++            <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
++            <DebugAllEnabled>false</DebugAllEnabled>
++            <method v="2"/>
++        </configuration>
++        <configuration name="BoardTest.testDeleteBoard" type="GradleRunConfiguration" factoryName="Gradle"
++                       temporary="true">
++            <ExternalSystemSettings>
++                <option name="executionName"/>
++                <option name="externalProjectPath" value="$PROJECT_DIR$"/>
++                <option name="externalSystemIdString" value="GRADLE"/>
++                <option name="scriptParameters" value=""/>
++                <option name="taskDescriptions">
++                    <list/>
++                </option>
++                <option name="taskNames">
++                    <list>
++                        <option value=":test"/>
++                        <option value="--tests"/>
++                        <option value="&quot;com.encore.bbabap.domain.board.BoardTest.testDeleteBoard&quot;"/>
++                    </list>
++                </option>
++                <option name="vmOptions"/>
++            </ExternalSystemSettings>
++            <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
++            <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
++            <DebugAllEnabled>false</DebugAllEnabled>
++            <method v="2"/>
++        </configuration>
++        <configuration name="BoardTest.testReadBoard" type="GradleRunConfiguration" factoryName="Gradle"
++                       temporary="true">
++            <ExternalSystemSettings>
++                <option name="executionName"/>
++                <option name="externalProjectPath" value="$PROJECT_DIR$"/>
++                <option name="externalSystemIdString" value="GRADLE"/>
++                <option name="scriptParameters" value=""/>
++                <option name="taskDescriptions">
++                    <list/>
++                </option>
++                <option name="taskNames">
++                    <list>
++                        <option value=":test"/>
++                        <option value="--tests"/>
++                        <option value="&quot;com.encore.bbabap.domain.board.BoardTest.testReadBoard&quot;"/>
++                    </list>
++                </option>
++                <option name="vmOptions"/>
++            </ExternalSystemSettings>
++            <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
++            <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
++            <DebugAllEnabled>false</DebugAllEnabled>
++            <method v="2"/>
++        </configuration>
++        <configuration name="BoardTest.testUpdateBoard" type="GradleRunConfiguration" factoryName="Gradle"
++                       temporary="true">
++            <ExternalSystemSettings>
++                <option name="executionName"/>
++                <option name="externalProjectPath" value="$PROJECT_DIR$"/>
++                <option name="externalSystemIdString" value="GRADLE"/>
++                <option name="scriptParameters" value=""/>
++                <option name="taskDescriptions">
++                    <list/>
++                </option>
++                <option name="taskNames">
++                    <list>
++                        <option value=":test"/>
++                        <option value="--tests"/>
++                        <option value="&quot;com.encore.bbabap.domain.board.BoardTest.testUpdateBoard&quot;"/>
++                    </list>
++                </option>
++                <option name="vmOptions"/>
++            </ExternalSystemSettings>
++            <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
++            <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
++            <DebugAllEnabled>false</DebugAllEnabled>
++            <method v="2"/>
++        </configuration>
++        <configuration default="true" type="JetRunConfigurationType">
++            <module name="be05-2nd-1team-BbaBap.test"/>
++            <method v="2">
++                <option name="Make" enabled="true"/>
++            </method>
++        </configuration>
++        <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
++            <module name="be05-2nd-1team-BbaBap.test"/>
++            <option name="filePath"/>
++            <method v="2">
++                <option name="Make" enabled="true"/>
++            </method>
++        </configuration>
++        <configuration name="BabbapApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot"
++                       nameIsGenerated="true">
++            <module name="be05-2nd-1team-BbaBap.main"/>
++            <option name="SPRING_BOOT_MAIN_CLASS" value="com.encore.bbabap.BabbapApplication"/>
++            <method v="2">
++                <option name="Make" enabled="true"/>
++            </method>
++        </configuration>
++        <list>
++
++            <item itemvalue="Application.BabbapApplication"/>
++            <item itemvalue="Gradle.Bbabap_pjt [build]"/>
++            <item itemvalue="Gradle.CommentDomainTest.createComment"/>
++            <item itemvalue="Gradle.CommentRepositoryTest"/>
++            <item itemvalue="Gradle.CommentRepositoryTest.saveComment"/>
++        </list>
++        <recent_temporary>
++            <list>
++                <item itemvalue="Gradle.BoardTest"/>
++                <item itemvalue="Gradle.BoardTest.testCreateBoard"/>
++                <item itemvalue="Gradle.BoardTest.testDeleteBoard"/>
++                <item itemvalue="Gradle.BoardTest.testUpdateBoard"/>
++                <item itemvalue="Gradle.BoardTest.testReadBoard"/>
++            </list>
++        </recent_temporary>
++    </component>
++    <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0"
++               DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true"/>
++    <component name="SvnConfiguration">
++        <configuration>$USER_HOME$/.subversion</configuration>
++    </component>
++    <component name="TaskManager">
++        <task active="true" id="Default" summary="Default task">
++            <changelist id="d53b21e1-42f9-4465-afb3-b7b5ab54fc2d" name="Changes" comment=""/>
++            <created>1710247331027</created>
++            <option name="number" value="Default"/>
++            <option name="presentableId" value="Default"/>
++            <updated>1710247331027</updated>
++            <workItem from="1710247333053" duration="1185000"/>
++            <workItem from="1710339404102" duration="804000"/>
++            <workItem from="1710404862095" duration="6074000"/>
++            <workItem from="1710473625807" duration="1001000"/>
++            <workItem from="1710513482291" duration="1701000"/>
++            <workItem from="1710569549901" duration="1883000"/>
++            <workItem from="1710928427281" duration="1735000"/>
++            <workItem from="1710930700270" duration="3298000"/>
++            <workItem from="1711087709239" duration="6184000"/>
++            <workItem from="1711100110519" duration="376000"/>
++            <workItem from="1711166312623" duration="2444000"/>
++            <workItem from="1711211457583" duration="1323000"/>
++            <workItem from="1711344899991" duration="22706000"/>
++            <workItem from="1711421075414" duration="1936000"/>
++            <workItem from="1711423442541" duration="220000"/>
++            <workItem from="1711423668529" duration="1535000"/>
++            <workItem from="1711429438675" duration="2174000"/>
++            <workItem from="1711433122239" duration="1839000"/>
++        </task>
++        <task id="LOCAL-00001" summary="test : git">
++            <created>1710247503415</created>
++            <option name="number" value="00001"/>
++            <option name="presentableId" value="LOCAL-00001"/>
++            <option name="project" value="LOCAL"/>
++            <updated>1710247503415</updated>
++        </task>
++        <task id="LOCAL-00002" summary="test : commit to main">
++            <created>1710407284830</created>
++            <option name="number" value="00002"/>
++            <option name="presentableId" value="LOCAL-00002"/>
++            <option name="project" value="LOCAL"/>
++            <updated>1710407284830</updated>
++        </task>
++        <task id="LOCAL-00003" summary="test : commit to main 2">
++            <created>1710407845763</created>
++            <option name="number" value="00003"/>
++            <option name="presentableId" value="LOCAL-00003"/>
++            <option name="project" value="LOCAL"/>
++            <updated>1710407845763</updated>
++        </task>
++        <task id="LOCAL-00004"
++              summary="Merge branch 'main' into zzimni&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/com/encore/bbabap/TestClass.java">
++            <created>1710409686838</created>
++            <option name="number" value="00004"/>
++            <option name="presentableId" value="LOCAL-00004"/>
++            <option name="project" value="LOCAL"/>
++            <updated>1710409686838</updated>
++        </task>
++        <task id="LOCAL-00005" summary="test : git branch">
++            <created>1710513782454</created>
++            <option name="number" value="00005"/>
++            <option name="presentableId" value="LOCAL-00005"/>
++            <option name="project" value="LOCAL"/>
++            <updated>1710513782454</updated>
++        </task>
++        <task id="LOCAL-00006" summary="test : git branch">
++            <created>1710513853079</created>
++            <option name="number" value="00006"/>
++            <option name="presentableId" value="LOCAL-00006"/>
++            <option name="project" value="LOCAL"/>
++            <updated>1710513853079</updated>
++        </task>
++        <task id="LOCAL-00007" summary="feat : user login, register">
++            <created>1710929167033</created>
++            <option name="number" value="00007"/>
++            <option name="presentableId" value="LOCAL-00007"/>
++            <option name="project" value="LOCAL"/>
++            <updated>1710929167033</updated>
++        </task>
++        <task id="LOCAL-00008" summary="add : user entity test code">
++            <created>1710929252602</created>
++            <option name="number" value="00008"/>
++            <option name="presentableId" value="LOCAL-00008"/>
++            <option name="project" value="LOCAL"/>
++            <updated>1710929252602</updated>
++        </task>
++        <task id="LOCAL-00009" summary="refactor : remove @Setter, @ToString from user entity">
++            <created>1711355332944</created>
++            <option name="number" value="00009"/>
++            <option name="presentableId" value="LOCAL-00009"/>
++            <option name="project" value="LOCAL"/>
++            <updated>1711355332944</updated>
++        </task>
++        <task id="LOCAL-00010" summary="refactor : remove @Setter, @ToString from user entity">
++            <created>1711355745991</created>
++            <option name="number" value="00010"/>
++            <option name="presentableId" value="LOCAL-00010"/>
++            <option name="project" value="LOCAL"/>
++            <updated>1711355745991</updated>
++        </task>
++        <task id="LOCAL-00011" summary="refactor : test">
++            <created>1711356243353</created>
++            <option name="number" value="00011"/>
++            <option name="presentableId" value="LOCAL-00011"/>
++            <option name="project" value="LOCAL"/>
++            <updated>1711356243353</updated>
++        </task>
++        <task id="LOCAL-00012" summary="refactor : git test">
++            <created>1711356476154</created>
++            <option name="number" value="00012"/>
++            <option name="presentableId" value="LOCAL-00012"/>
++            <option name="project" value="LOCAL"/>
++            <updated>1711356476154</updated>
++        </task>
++        <task id="LOCAL-00013" summary="test : git test">
++            <created>1711361701393</created>
++            <option name="number" value="00013"/>
++            <option name="presentableId" value="LOCAL-00013"/>
++            <option name="project" value="LOCAL"/>
++            <updated>1711361701393</updated>
++        </task>
++        <task id="LOCAL-00014" summary="refactor : user test 패키조 구조">
++            <created>1711379221279</created>
++            <option name="number" value="00014"/>
++            <option name="presentableId" value="LOCAL-00014"/>
++            <option name="project" value="LOCAL"/>
++            <updated>1711379221279</updated>
++        </task>
++        <task id="LOCAL-00015" summary="refactor : user test 패키조 구조, 삭제">
++            <created>1711380399259</created>
++            <option name="number" value="00015"/>
++            <option name="presentableId" value="LOCAL-00015"/>
++            <option name="project" value="LOCAL"/>
++            <updated>1711380399259</updated>
++        </task>
++        <task id="LOCAL-00016" summary="refactor : user test 패키조 구조, 삭제">
++            <created>1711423531977</created>
++            <option name="number" value="00016"/>
++            <option name="presentableId" value="LOCAL-00016"/>
++            <option name="project" value="LOCAL"/>
++            <updated>1711423531977</updated>
++        </task>
++        <task id="LOCAL-00017" summary="refactor : db password change">
++            <created>1711433144780</created>
++            <option name="number" value="00017"/>
++            <option name="presentableId" value="LOCAL-00017"/>
++            <option name="project" value="LOCAL"/>
++            <updated>1711433144780</updated>
++        </task>
++        <option name="localTasksCounter" value="18"/>
++        <servers/>
++    </component>
++    <component name="TypeScriptGeneratedFilesManager">
++        <option name="version" value="3"/>
++    </component>
++    <component name="Vcs.Log.Tabs.Properties">
++        <option name="TAB_STATES">
++            <map>
++                <entry key="MAIN">
++                    <value>
++                        <State>
++                            <option name="FILTERS">
++                                <map>
++                                    <entry key="branch">
++                                        <value>
++                                            <list>
++                                                <option value="origin/main"/>
++                                            </list>
++                                        </value>
++                                    </entry>
++                                </map>
++                            </option>
++                        </State>
++                    </value>
++                </entry>
++            </map>
++        </option>
++    </component>
++    <component name="VcsManagerConfiguration">
++        <MESSAGE value="test : git"/>
++        <MESSAGE value="test : commit to main"/>
++        <MESSAGE value="test : commit to main 2"/>
++        <MESSAGE
++                value="Merge branch 'main' into zzimni&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/com/encore/bbabap/TestClass.java"/>
++        <MESSAGE value="test : git branch"/>
++        <MESSAGE value="feat : user login, register"/>
++        <MESSAGE value="add : user entity test code"/>
++        <MESSAGE value="refactor : remove @Setter, @ToString from user entity"/>
++        <MESSAGE value="refactor : test"/>
++        <MESSAGE value="refactor : git test"/>
++        <MESSAGE value="test : git test"/>
++        <MESSAGE value="refactor : user test 패키조 구조"/>
++        <MESSAGE value="refactor : user test 패키조 구조, 삭제"/>
++        <MESSAGE value="refactor : db password change"/>
++        <option name="LAST_COMMIT_MESSAGE" value="refactor : db password change"/>
++    </component>
++    <component name="XDebuggerManager">
++        <breakpoint-manager>
++            <breakpoints>
++                <breakpoint enabled="true" type="java-exception">
++                    <properties class="java.lang.RuntimeException" package="java.lang"/>
++                    <option name="timeStamp" value="4"/>
++                </breakpoint>
++                <line-breakpoint enabled="true" type="java-line">
++                    <url>file://$PROJECT_DIR$/src/main/java/com/encore/bbabap/config/SecurityUtils.java</url>
++                    <line>11</line>
++                    <option name="timeStamp" value="8"/>
++                </line-breakpoint>
++            </breakpoints>
++        </breakpoint-manager>
++    </component>
++    <component name="XSLT-Support.FileAssociations.UIState">
++        <expand/>
++        <select/>
++    </component>
+ </project>
+\ No newline at end of file

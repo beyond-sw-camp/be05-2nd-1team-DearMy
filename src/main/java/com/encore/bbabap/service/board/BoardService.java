@@ -61,11 +61,7 @@ public class BoardService {
     @Transactional(readOnly = true)
     public List<BoardResponseDTO> getAllBoards() {
         List<Board> boards = boardRepository.findAll();
-        for(Board board : boards){ // 삭제된 게시글 조회 x 처리
-            if (board.getDeletedYn()){
-                boards.remove(board);
-            }
-        }
+        boards.removeIf(Board::getDeletedYn);
         return boards.stream()
                 .map(this::convertToDTO)
                 .collect(Collectors.toList());

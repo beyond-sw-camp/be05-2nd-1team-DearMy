@@ -1,4 +1,5 @@
 Manifest-Version: 1.0
+<<<<<<< HEAD
 Main-Class: org.springframework.boot.loader.JarLauncher
 Start-Class: com.encore.bbabap.BbabapApplication
 Spring-Boot-Version: 3.1.9
@@ -9,4 +10,6 @@ Spring-Boot-Layers-Index: BOOT-INF/layers.idx
 Build-Jdk-Spec: 17
 Implementation-Title: bbabap
 Implementation-Version: 0.0.1-SNAPSHOT
+=======
+>>>>>>> refactoring-zn
 

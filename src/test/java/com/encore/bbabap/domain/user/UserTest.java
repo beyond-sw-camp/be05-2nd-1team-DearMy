@@ -4,6 +4,7 @@ package com.encore.bbabap.domain.user;
 import com.encore.bbabap.api.user.request.UserUpdateRequest;
 import com.encore.bbabap.domain.enums.CarType;
 import java.time.LocalDateTime;
+
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

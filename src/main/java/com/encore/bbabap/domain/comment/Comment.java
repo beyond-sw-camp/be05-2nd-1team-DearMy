@@ -28,6 +28,9 @@ public class Comment {
     @Column(name = "created_at")
     private LocalDateTime createdAt;
 
+    @Column(name = "deleted_yn")
+    private Boolean deletedYn;
+
     @Column(name = "deleted_at")
     private LocalDateTime deletedAt; // 삭제 시간 추가
 
@@ -40,10 +43,11 @@ public class Comment {
     private Board board;
 
     @Builder
-    public Comment(Long id, String content, LocalDateTime createdAt, LocalDateTime deletedAt, User user, Board board) {
+    public Comment(Long id, String content, LocalDateTime createdAt, Boolean deletedYn, LocalDateTime deletedAt, User user, Board board) {
         this.id = id;
         this.content = content;
         this.createdAt = createdAt;
+        this.deletedYn = deletedYn;
         this.deletedAt = deletedAt; // 삭제 시간 설정
         this.user = user;
         this.board = board;
