@@ -9,13 +9,13 @@ public class UserResponse {
 
     private final String email;
     private final String nickname;
-    private final CarType carType;
+//    private final CarType carType;
 
     @Builder
-    public UserResponse(String email, String nickname, CarType carType) {
+    public UserResponse(String email, String nickname) {
         this.email = email;
         this.nickname = nickname;
-        this.carType = carType;
+//        this.carType = carType;
     }
 
 //    public static MemberResponse of(Member savedMember) {

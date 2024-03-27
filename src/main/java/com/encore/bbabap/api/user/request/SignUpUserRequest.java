@@ -14,7 +14,7 @@ public class SignUpUserRequest {
 
     private String nickname;
 
-    private CarType carType;
+//    private CarType carType;
 
 
 }

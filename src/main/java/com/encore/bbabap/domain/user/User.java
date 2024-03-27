@@ -52,7 +52,7 @@ public class User {
     public void updateMemberDetail(UserUpdateRequest request) {
         this.nickname = request.getNickname();
         this.password = request.getPassword();
-        this.carType = request.getCarType();
+//        this.carType = request.getCarType();
         this.updatedAt = LocalDateTime.now();
     }
     public void deleteUser() {

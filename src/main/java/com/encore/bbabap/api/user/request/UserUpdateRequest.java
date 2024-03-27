@@ -13,7 +13,7 @@ public class UserUpdateRequest {
 
     private String password;
 
-    private CarType carType;
+//    private CarType carType;
 
 
 

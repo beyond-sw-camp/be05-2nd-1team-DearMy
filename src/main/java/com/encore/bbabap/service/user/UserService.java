@@ -33,7 +33,7 @@ public class UserService {
         return UserResponse.builder()
                 .email(savedUser.getEmail())
                 .nickname(savedUser.getNickname())
-                .carType(savedUser.getCarType())
+//                .carType(savedUser.getCarType())
                 .build();
     }
 
@@ -41,8 +41,8 @@ public class UserService {
         List<User> users = userRepository.findUsersByDeletedYnFalse();
 
         return users.stream()
-                .map(user -> new UserResponse(user.getEmail(), user.getNickname(),
-                        user.getCarType()))
+                .map(user -> new UserResponse(user.getEmail(), user.getNickname()
+                        ))
                 .collect(Collectors.toList());
     }
 
@@ -74,7 +74,7 @@ public class UserService {
                 .email(request.getEmail())
                 .nickname(request.getNickname())
                 .password(bCryptPasswordEncoder.encode(request.getPassword()))
-                .carType(request.getCarType())
+//                .carType(request.getCarType())
                 .build();
     }
 
