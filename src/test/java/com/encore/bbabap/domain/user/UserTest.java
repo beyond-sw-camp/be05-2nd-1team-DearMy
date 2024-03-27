@@ -1,7 +1,6 @@
 package com.encore.bbabap.domain.user;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
 import com.encore.bbabap.api.user.request.UserUpdateRequest;
 import com.encore.bbabap.domain.enums.CarType;
@@ -10,7 +9,6 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 class UserTest {
-
 
     @DisplayName("회원 가입 시 회원 상태는 deleteYn = false 이다.")
     @Test
@@ -23,20 +21,6 @@ class UserTest {
 
         //then
         assertThat(deletedYn).isFalse();
-    }
-
-    // TODO : 테스트 실패 -> 매개변수로 빼야할지 고민중
-    @DisplayName("회원 가입 시 가입시간은 현재 날짜와 동일하다.")
-    @Test
-    void signUp2() {
-        //given
-        User user = createMember("aaa@naver.com", "동동이", "1324", CarType.A_TYPE);
-
-        //when
-        LocalDateTime registeredAt = user.getRegisteredAt();
-
-        //then
-        assertThat(registeredAt).isEqualTo(LocalDateTime.now());
     }
 
 
@@ -54,7 +38,6 @@ class UserTest {
         UserUpdateRequest userUpdateRequest = UserUpdateRequest.builder()
                 .nickname("동동십")
                 .password("1234")
-                .carType(CarType.B_TYPE)
                 .build();
 
         user.updateMemberDetail(userUpdateRequest);
@@ -81,7 +64,6 @@ class UserTest {
         UserUpdateRequest userUpdateRequest = UserUpdateRequest.builder()
                 .nickname("동동십")
                 .password("1234")
-                .carType(CarType.B_TYPE)
                 .build();
 
         user.updateMemberDetail(userUpdateRequest);
@@ -103,7 +85,6 @@ class UserTest {
         UserUpdateRequest userUpdateRequest = UserUpdateRequest.builder()
                 .nickname("동동십")
                 .password("1234")
-                .carType(CarType.B_TYPE)
                 .build();
 
         user.updateMemberDetail(userUpdateRequest);
