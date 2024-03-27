@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="Gradle: org.springframework.security:spring-security-core:6.1.7">
+  <library name="Gradle: org.springframework.security:spring-security-core:6.1.7" external-system-id="GRADLE">
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.security/spring-security-core/6.1.7/a08ac89815d952ea70ac1dd351643974cd08ee7c/spring-security-core-6.1.7.jar!/" />
     </CLASSES>

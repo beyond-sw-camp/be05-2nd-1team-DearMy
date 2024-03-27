@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="Gradle: org.springframework.boot:spring-boot-autoconfigure:3.1.9">
+  <library name="Gradle: org.springframework.boot:spring-boot-autoconfigure:3.1.9" external-system-id="GRADLE">
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-autoconfigure/3.1.9/19aea657369f6764bf589ffe89d3b8ff892d8329/spring-boot-autoconfigure-3.1.9.jar!/" />
     </CLASSES>
