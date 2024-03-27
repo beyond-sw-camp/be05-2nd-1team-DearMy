@@ -1,24 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module external.linked.project.id="be05-2nd-1team-BbaBap:test" external.linked.project.path="$MODULE_DIR$/../.." external.root.project.path="$MODULE_DIR$/../.." external.system.id="GRADLE" external.system.module.group="com.encore" external.system.module.type="sourceSet" external.system.module.version="0.0.1-SNAPSHOT" type="JAVA_MODULE" version="4">
   <component name="FacetManager">
-    <facet type="web" name="Web">
+    <facet external-system-id="GRADLE" type="web" name="Web">
       <configuration>
         <webroots />
       </configuration>
-    </facet>
-    <facet type="jpa" name="JPA">
-      <configuration>
-        <setting name="validation-enabled" value="true" />
-        <setting name="provider-name" value="Hibernate" />
-        <datasource-mapping>
-          <factory-entry name="be05-2nd-1team-BbaBap.test" />
-          <factory-entry name="entityManagerFactory" />
-        </datasource-mapping>
-        <naming-strategy-map />
-      </configuration>
-    </facet>
-    <facet type="Spring" name="Spring">
-      <configuration />
     </facet>
   </component>
   <component name="NewModuleRootManager">
@@ -42,6 +28,7 @@
     <orderEntry type="library" name="Gradle: org.apache.tomcat.embed:tomcat-embed-jasper:10.1.19" level="project" />
     <orderEntry type="library" name="Gradle: javax.servlet:jstl:1.2" level="project" />
     <orderEntry type="library" name="Gradle: org.json:json:20231013" level="project" />
+    <orderEntry type="library" name="Gradle: org.springdoc:springdoc-openapi-starter-webmvc-ui:2.2.0" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-test:3.1.9" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-json:3.1.9" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter:3.1.9" level="project" />
@@ -64,6 +51,8 @@
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-reactor-netty:3.1.9" level="project" />
     <orderEntry type="library" name="Gradle: org.apache.tomcat.embed:tomcat-embed-core:10.1.19" level="project" />
     <orderEntry type="library" name="Gradle: org.eclipse.jdt:ecj:3.33.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.springdoc:springdoc-openapi-starter-webmvc-api:2.2.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.webjars:swagger-ui:5.2.0" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-test-autoconfigure:3.1.9" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-test:3.1.9" level="project" />
     <orderEntry type="library" name="Gradle: com.jayway.jsonpath:json-path:2.9.0" level="project" />
@@ -111,6 +100,7 @@
     <orderEntry type="library" name="Gradle: io.projectreactor:reactor-core:3.5.14" level="project" />
     <orderEntry type="library" name="Gradle: io.projectreactor.netty:reactor-netty-http:1.1.16" level="project" />
     <orderEntry type="library" name="Gradle: org.apache.tomcat:tomcat-annotations-api:10.1.19" level="project" />
+    <orderEntry type="library" name="Gradle: org.springdoc:springdoc-openapi-starter-common:2.2.0" level="project" />
     <orderEntry type="library" name="Gradle: jakarta.activation:jakarta.activation-api:2.1.2" level="project" />
     <orderEntry type="library" name="Gradle: net.minidev:accessors-smart:2.4.11" level="project" />
     <orderEntry type="library" name="Gradle: net.bytebuddy:byte-buddy:1.14.12" level="project" />
@@ -133,6 +123,7 @@
     <orderEntry type="library" name="Gradle: io.netty:netty-resolver-dns-native-macos:osx-x86_64:4.1.107.Final" level="project" />
     <orderEntry type="library" name="Gradle: io.netty:netty-resolver-dns:4.1.107.Final" level="project" />
     <orderEntry type="library" name="Gradle: io.netty:netty-transport-native-epoll:linux-x86_64:4.1.107.Final" level="project" />
+    <orderEntry type="library" name="Gradle: io.swagger.core.v3:swagger-core-jakarta:2.2.15" level="project" />
     <orderEntry type="library" name="Gradle: org.ow2.asm:asm:9.3" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: org.apiguardian:apiguardian-api:1.1.2" level="project" />
     <orderEntry type="library" name="Gradle: org.junit.platform:junit-platform-commons:1.9.3" level="project" />
@@ -150,6 +141,10 @@
     <orderEntry type="library" name="Gradle: io.netty:netty-resolver:4.1.107.Final" level="project" />
     <orderEntry type="library" name="Gradle: io.netty:netty-transport-classes-epoll:4.1.107.Final" level="project" />
     <orderEntry type="library" name="Gradle: io.netty:netty-transport-native-unix-common:4.1.107.Final" level="project" />
+    <orderEntry type="library" name="Gradle: io.swagger.core.v3:swagger-models-jakarta:2.2.15" level="project" />
+    <orderEntry type="library" name="Gradle: com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.15.4" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.commons:commons-lang3:3.12.0" level="project" />
+    <orderEntry type="library" name="Gradle: io.swagger.core.v3:swagger-annotations-jakarta:2.2.15" level="project" />
     <orderEntry type="library" name="Gradle: io.netty:netty-codec-socks:4.1.107.Final" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: com.mysql:mysql-connector-j:8.0.33" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: org.glassfish.jaxb:jaxb-runtime:4.0.4" level="project" />
