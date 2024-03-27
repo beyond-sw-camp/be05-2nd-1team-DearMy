@@ -1,10 +1,8 @@
 package com.encore.bbabap.domain.user;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
 import com.encore.bbabap.api.user.request.UserUpdateRequest;
-import com.encore.bbabap.domain.enums.CarType;
 import java.time.LocalDateTime;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -16,7 +14,7 @@ class UserTest {
     @Test
     void signUp() {
         //given
-        User user = createMember("aaa@naver.com", "동동이", "1324", CarType.A_TYPE);
+        User user = createMember("aaa@naver.com", "동동이", "1324");
 
         //when
         Boolean deletedYn = user.getDeletedYn();
@@ -30,7 +28,7 @@ class UserTest {
     @Test
     void signUp2() {
         //given
-        User user = createMember("aaa@naver.com", "동동이", "1324", CarType.A_TYPE);
+        User user = createMember("aaa@naver.com", "동동이", "1324");
 
         //when
         LocalDateTime registeredAt = user.getRegisteredAt();
@@ -44,29 +42,25 @@ class UserTest {
     @Test
     void update() {
         //given
-        User user = createMember("aaa@naver.com", "동동이", "1324", CarType.A_TYPE);
+        User user = createMember("aaa@naver.com", "동동이", "1324");
 
         //when
         String registeredNickname = user.getNickname();
         String registeredPassword = user.getPassword();
-        CarType registeredCarType = user.getCarType();
 
         UserUpdateRequest userUpdateRequest = UserUpdateRequest.builder()
                 .nickname("동동십")
                 .password("1234")
-                .carType(CarType.B_TYPE)
                 .build();
 
         user.updateMemberDetail(userUpdateRequest);
 
         String afterUpdateNickname = user.getNickname();
         String afterUpdatePassword = user.getPassword();
-        CarType afterUpdateCarType = user.getCarType();
 
         //then
         assertThat(registeredNickname).isNotEqualTo(afterUpdateNickname);
         assertThat(registeredPassword).isNotEqualTo(afterUpdatePassword);
-        assertThat(registeredCarType).isNotEqualTo(afterUpdateCarType);
 
     }
 
@@ -74,14 +68,13 @@ class UserTest {
     @Test
     void update2() {
         //given
-        User user = createMember("aaa@naver.com", "동동이", "1324", CarType.A_TYPE);
+        User user = createMember("aaa@naver.com", "동동이", "1324");
 
         //when
         LocalDateTime beforeUpdatedAt = user.getUpdatedAt();
         UserUpdateRequest userUpdateRequest = UserUpdateRequest.builder()
                 .nickname("동동십")
                 .password("1234")
-                .carType(CarType.B_TYPE)
                 .build();
 
         user.updateMemberDetail(userUpdateRequest);
@@ -95,7 +88,7 @@ class UserTest {
     @Test
     void update3() {
         //given
-        User user = createMember("aaa@naver.com", "동동이", "1324", CarType.A_TYPE);
+        User user = createMember("aaa@naver.com", "동동이", "1324");
 
         //when
         LocalDateTime registeredAt = user.getRegisteredAt();
@@ -103,7 +96,6 @@ class UserTest {
         UserUpdateRequest userUpdateRequest = UserUpdateRequest.builder()
                 .nickname("동동십")
                 .password("1234")
-                .carType(CarType.B_TYPE)
                 .build();
 
         user.updateMemberDetail(userUpdateRequest);
@@ -113,14 +105,12 @@ class UserTest {
         assertThat(registeredAt).isNotEqualTo(afterUpdatedAt);
     }
 
-    private static User createMember(String email, String nickname, String password,
-            CarType carType) {
+    private static User createMember(String email, String nickname, String password) {
 
         return User.builder()
                 .email(email)
                 .nickname(nickname)
                 .password(password)
-                .carType(carType)
                 .build();
     }
 

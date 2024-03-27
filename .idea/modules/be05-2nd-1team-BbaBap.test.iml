@@ -4,7 +4,6 @@
     <facet type="web" name="Web">
       <configuration>
         <webroots />
-        <sourceRoots />
       </configuration>
     </facet>
     <facet type="jpa" name="JPA">
@@ -13,6 +12,7 @@
         <setting name="provider-name" value="Hibernate" />
         <datasource-mapping>
           <factory-entry name="be05-2nd-1team-BbaBap.test" />
+          <factory-entry name="entityManagerFactory" />
         </datasource-mapping>
         <naming-strategy-map />
       </configuration>
@@ -88,8 +88,8 @@
     <orderEntry type="library" name="Gradle: org.yaml:snakeyaml:1.33" level="project" />
     <orderEntry type="library" name="Gradle: org.apache.tomcat.embed:tomcat-embed-websocket:10.1.19" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework:spring-context:6.0.17" level="project" />
-    <orderEntry type="library" name="Gradle: org.springframework:spring-beans:6.0.17" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework:spring-expression:6.0.17" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework:spring-beans:6.0.17" level="project" />
     <orderEntry type="library" name="Gradle: io.micrometer:micrometer-observation:1.11.9" level="project" />
     <orderEntry type="library" name="Gradle: org.thymeleaf:thymeleaf:3.1.2.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.slf4j:slf4j-api:2.0.12" level="project" />

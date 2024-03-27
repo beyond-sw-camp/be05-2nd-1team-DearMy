@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="Gradle: org.apache.tomcat:tomcat-annotations-api:10.1.19">
+  <library name="Gradle: org.apache.tomcat:tomcat-annotations-api:10.1.19" external-system-id="GRADLE">
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.tomcat/tomcat-annotations-api/10.1.19/c4e13338b396aded8c547cdf6039519ea875ec28/tomcat-annotations-api-10.1.19.jar!/" />
     </CLASSES>
