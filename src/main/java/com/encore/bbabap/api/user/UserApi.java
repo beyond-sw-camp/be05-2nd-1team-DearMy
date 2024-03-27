@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
 @RestController
 @RequiredArgsConstructor
@@ -27,9 +28,13 @@ public class UserApi {
 
     // 멤버 가입
     @PostMapping("/register")
-    public ResponseEntity<UserResponse> signUp(@RequestBody SignUpUserRequest request) {
+    public ResponseEntity<String> signUp(@RequestBody SignUpUserRequest request) {
         UserResponse userResponse = userService.signUp(request);
-        return new ResponseEntity<>(userResponse, HttpStatus.OK);
+        if (userResponse != null) {
+            return ResponseEntity.ok("회원가입이 완료되었습니다. 로그인 페이지로 이동하세요.");
+        } else {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("회원가입에 실패했습니다.");
+        }
     }
 
     // 전체 멤버 조회

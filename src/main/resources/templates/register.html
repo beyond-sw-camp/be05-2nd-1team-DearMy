@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>회원가입</title>
+</head>
+<body>
+<h2>회원가입</h2>
+<form id="signupForm">
+  <label for="email">이메일:</label>
+  <input type="email" id="email" name="email" required><br>
+  <label for="password">비밀번호:</label>
+  <input type="password" id="password" name="password" required><br>
+  <label for="nickname">닉네임:</label>
+  <input type="text" id="nickname" name="nickname" required><br>
+<!--  <label for="carType">차량 타입:</label>-->
+<!--  <select id="carType" name="carType" required>-->
+<!--    <option value="" disabled selected>차량 타입을 선택하세요</option>-->
+<!--    <option value="AC_SINGLE_PHASE_5PIN">AC 단상 (5핀)</option>-->
+<!--    <option value="AC_THREE_PHASE_7PIN">AC 3상 (7핀)</option>-->
+<!--    <option value="DC_COMBO_CCS">DC 콤보 (CCS)</option>-->
+<!--    <option value="CHADEMO">차데모, CHAdeMO</option>-->
+<!--    <option value="TESLA_NACS">테슬라 NACS</option>-->
+<!--  </select><br>-->
+  <button type="submit">가입</button>
+</form>
+
+<script>
+  document.getElementById('signupForm').addEventListener('submit', async function(event) {
+    event.preventDefault();
+    const formData = new FormData(this);
+    const jsonObject = {};
+    formData.forEach((value, key) => { jsonObject[key] = value; });
+    const response = await fetch('/api/v1/members/register', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(jsonObject)
+    });
+    const data = await response.text();
+    alert(data); // 서버에서 반환한 메시지 출력
+    if (response.ok) {
+      window.location.href = '/login'; // 로그인 페이지로 이동
+    } else {
+      // 실패 시 사용자에게 피드백 제공
+      alert('가입 실패: ' + data);
+    }
+  });
+</script>
+</body>
+</html>

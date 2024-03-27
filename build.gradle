@@ -23,6 +23,7 @@ repositories {
 }
 
 dependencies {
+
 	// web
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
@@ -51,6 +52,9 @@ dependencies {
 
 	// test
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+
+
 }
 
 tasks.named('bootBuildImage') {
