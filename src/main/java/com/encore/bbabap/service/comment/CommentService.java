@@ -11,6 +11,8 @@ import com.encore.bbabap.repository.Comment.CommentRepository;
 import com.encore.bbabap.repository.board.BoardRepository;
 import com.encore.bbabap.repository.user.UserRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -26,29 +28,31 @@ public class CommentService {
     private final BoardRepository boardRepository;
     private final UserRepository userRepository;
 
-    @Transactional
+//    @Transactional
     public CommentResponseDTO addComment(CommentRequestDTO requestDTO) {
 
         Board board = boardRepository.findById(requestDTO.getBoardId())
                 .orElseThrow(() -> new RuntimeException("Board not found with id: " + requestDTO.getBoardId()));
 
         String userEmail = SecurityUtils.getCurrentUserEmail(); // 현재 사용자의 이메일 가져오기
+        System.out.println(userEmail);
 
         User user = userRepository.findByEmail(userEmail);
         if (user == null) {
             throw new RuntimeException("User not found with email: " + userEmail);
         }
 
-        // 사용자 권한 확인: 게시물 작성자만 댓글을 작성할 수 있도록
-        if (!board.getUser().getEmail().equals(userEmail)) {
-            throw new RuntimeException("You do not have permission to add comment to this board.");
-        }
+//        // 사용자 권한 확인: 게시물 작성자만 댓글을 작성할 수 있도록
+//        if (!board.getUser().getEmail().equals(userEmail)) {
+//            throw new RuntimeException("You do not have permission to add comment to this board.");
+//        }
 
         Comment comment = Comment.builder()
                 .content(requestDTO.getContent())
                 .createdAt(LocalDateTime.now())
                 .user(user)
                 .board(board)
+                .deletedYn(false)
                 .build();
 
         Comment savedComment = commentRepository.save(comment);
@@ -65,12 +69,16 @@ public class CommentService {
 
         String userEmail = SecurityUtils.getCurrentUserEmail(); // 현재 사용자의 이메일 가져오기
 
+//        System.out.println(comment.getUser().getEmail());
+//        System.out.println(userEmail); // 이거 anonymousUser로 뜨는디 왜 그러지..
+
         // 사용자 권한 확인: 댓글 작성자만 삭제할 수 있도록
         if (!comment.getUser().getEmail().equals(userEmail)) {
             throw new RuntimeException("You do not have permission to delete this comment.");
         }
 
         comment.setDeletedAt(LocalDateTime.now()); // 삭제 시간 설정
+        comment.setDeletedYn(true); // 삭제 여부 설정
 
         // 실제로 데이터를 삭제하는 경우
         // commentRepository.delete(comment);
@@ -79,6 +87,8 @@ public class CommentService {
     @Transactional(readOnly = true)
     public List<CommentResponseDTO> getAllCommentsByBoardId(Long boardId) {
         List<Comment> comments = commentRepository.findAllByBoardId(boardId);
+        comments.removeIf(Comment::getDeletedYn);
+        System.out.println(comments.stream().map(this::convertToDTO).collect(Collectors.toList()));
         return comments.stream()
                 .map(this::convertToDTO)
                 .collect(Collectors.toList());

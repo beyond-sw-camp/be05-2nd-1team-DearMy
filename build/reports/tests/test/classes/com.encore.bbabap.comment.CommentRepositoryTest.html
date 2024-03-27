@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.946s</div>
+<div class="counter">1.054s</div>
 <p>duration</p>
 </div>
 </td>
@@ -81,7 +81,7 @@
 <tr>
 <td class="success">Repository를 통한 코멘트 생성</td>
 <td class="success">saveComment()</td>
-<td class="success">0.946s</td>
+<td class="success">1.054s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -89,8 +89,8 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>04:20:45.410 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.encore.bbabap.comment.CommentRepositoryTest]: CommentRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-04:20:45.877 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.encore.bbabap.BabbapApplication for test class com.encore.bbabap.comment.CommentRepositoryTest
+<pre>04:24:04.731 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.encore.bbabap.comment.CommentRepositoryTest]: CommentRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+04:24:05.052 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.encore.bbabap.BabbapApplication for test class com.encore.bbabap.comment.CommentRepositoryTest
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -100,7 +100,7 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.1.9)
 
-2024-03-27T04:20:46.753+09:00  WARN 20876 --- [    Test worker] ory$DuplicateJsonObjectContextCustomizer : 
+2024-03-27T04:24:05.811+09:00  WARN 11128 --- [    Test worker] ory$DuplicateJsonObjectContextCustomizer : 
 
 Found multiple occurrences of org.json.JSONObject on the class path:
 
@@ -109,23 +109,23 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2024-03-27T04:20:46.787+09:00  INFO 20876 --- [    Test worker] c.e.b.comment.CommentRepositoryTest      : Starting CommentRepositoryTest using Java 17.0.10 with PID 20876 (started by Playdata in C:\encore\intellij_java_workspace\Bbabap_pjt)
-2024-03-27T04:20:46.789+09:00  INFO 20876 --- [    Test worker] c.e.b.comment.CommentRepositoryTest      : No active profile set, falling back to 1 default profile: &quot;default&quot;
-2024-03-27T04:20:47.811+09:00  INFO 20876 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-03-27T04:20:48.301+09:00  INFO 20876 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 474 ms. Found 5 JPA repository interfaces.
-2024-03-27T04:20:48.828+09:00  INFO 20876 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-03-27T04:20:48.918+09:00  INFO 20876 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.22.Final
-2024-03-27T04:20:48.925+09:00  INFO 20876 --- [    Test worker] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
-2024-03-27T04:20:49.373+09:00  INFO 20876 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-03-27T04:20:49.441+09:00  INFO 20876 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-03-27T04:20:49.734+09:00  INFO 20876 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5599b5bb
-2024-03-27T04:20:49.737+09:00  INFO 20876 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-03-27T04:20:49.789+09:00  WARN 20876 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 5.7.0. Check the community dialects project for available legacy versions.
-2024-03-27T04:20:49.798+09:00  WARN 20876 --- [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-03-27T04:20:51.391+09:00  INFO 20876 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-03-27T04:20:52.005+09:00  INFO 20876 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-03-27T04:20:52.691+09:00  INFO 20876 --- [    Test worker] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2024-03-27T04:20:53.633+09:00  INFO 20876 --- [    Test worker] c.e.b.comment.CommentRepositoryTest      : Started CommentRepositoryTest in 7.631 seconds (process running for 9.91)
+2024-03-27T04:24:05.832+09:00  INFO 11128 --- [    Test worker] c.e.b.comment.CommentRepositoryTest      : Starting CommentRepositoryTest using Java 17.0.10 with PID 11128 (started by Playdata in C:\encore\intellij_java_workspace\Bbabap_pjt)
+2024-03-27T04:24:05.833+09:00  INFO 11128 --- [    Test worker] c.e.b.comment.CommentRepositoryTest      : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2024-03-27T04:24:06.876+09:00  INFO 11128 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-27T04:24:07.613+09:00  INFO 11128 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 701 ms. Found 5 JPA repository interfaces.
+2024-03-27T04:24:08.141+09:00  INFO 11128 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-27T04:24:08.241+09:00  INFO 11128 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.22.Final
+2024-03-27T04:24:08.245+09:00  INFO 11128 --- [    Test worker] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-03-27T04:24:08.883+09:00  INFO 11128 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-27T04:24:08.958+09:00  INFO 11128 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-03-27T04:24:09.260+09:00  INFO 11128 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5599b5bb
+2024-03-27T04:24:09.262+09:00  INFO 11128 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-03-27T04:24:09.318+09:00  WARN 11128 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 5.7.0. Check the community dialects project for available legacy versions.
+2024-03-27T04:24:09.327+09:00  WARN 11128 --- [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-03-27T04:24:10.975+09:00  INFO 11128 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-27T04:24:11.312+09:00  INFO 11128 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-27T04:24:12.247+09:00  INFO 11128 --- [    Test worker] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-03-27T04:24:13.678+09:00  INFO 11128 --- [    Test worker] c.e.b.comment.CommentRepositoryTest      : Started CommentRepositoryTest in 8.454 seconds (process running for 10.657)
 Hibernate: insert into users (car_type,deleted_yn,email,nickname,password,registered_at,role,updated_at) values (?,?,?,?,?,?,?,?)
 Hibernate: insert into users (car_type,deleted_yn,email,nickname,password,registered_at,role,updated_at) values (?,?,?,?,?,?,?,?)
 Hibernate: insert into board (board_content,deleted_at,deleted_yn,registered_at,board_title,updated_at,email) values (?,?,?,?,?,?,?)
@@ -143,7 +143,7 @@ Hibernate: insert into comment (board_tbl_id,content,created_at,deleted_at,email
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.5</a> at 2024. 3. 27. 오전 4:20:54</p>
+<a href="http://www.gradle.org">Gradle 7.5</a> at 2024. 3. 27. 오전 4:24:14</p>
 </div>
 </div>
 </body>
