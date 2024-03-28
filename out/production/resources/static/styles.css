@@ -1,0 +1,133 @@
+/* 전체 페이지에 대한 기본 스타일 */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* 최소한 화면 높이 만큼의 높이를 갖도록 설정 */
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    display: flex;
+    justify-content: space-between; /* 로고를 왼쪽, 메뉴를 오른쪽에 배치 */
+    align-items: center; /* 수직 중앙 정렬 */
+}
+
+header .logo img {
+    height: 30px;
+    margin-left: 20px; /* 로고를 왼쪽으로 조금 띄움 */
+}
+
+nav {
+    flex-grow: 1; /* 남은 공간을 모두 차지하도록 설정 */
+    text-align: center; /* 메뉴를 가운데 정렬 */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* 가운데 정렬 */
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.main-content {
+    flex-grow: 1; /* 남은 공간을 모두 차지하도록 설정 */
+    display: flex;
+    justify-content: center; /* 가운데 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+}
+
+.main-image {
+    width: 100%; /* 이미지가 부모 요소에 가득 차도록 설정 */
+    height: auto;
+    object-fit: cover; /* 이미지 비율을 유지하면서 요소에 가득 차도록 설정 */
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto; /* 풋터를 아래에 고정시킴 */
+}
+
+/* 입력 폼 스타일 */
+form {
+    margin: 20px auto; /* 중앙 정렬 */
+    max-width: 400px; /* 최대 너비 설정 */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 추가 */
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form select {
+    width: calc(100% - 22px); /* 너비 조정 */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form input[type="submit"] {
+    width: 100%; /* 버튼 너비 100%로 설정 */
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* 표 스타일 */
+table {
+    margin: 20px auto; /* 중앙 정렬 */
+    max-width: 800px; /* 최대 너비 설정 */
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background-color: #333;
+    color: #fff;
+}
+
+.container {
+    text-align: center; /* 내용 가운데 정렬 */
+}
+
+.container h2 {
+    margin-top: 20px; /* 위 여백 추가 */
+}
