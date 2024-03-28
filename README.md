@@ -125,8 +125,10 @@
 # 2. 요구사항 정의
 ## 기능 명세서
 ![image](https://github.com/beyond-sw-camp/be05-2nd-1team-BBABAP/assets/155924495/8b5c45d0-fe8e-4600-9658-0b7122114f98)
+[기능 명세서](https://docs.google.com/spreadsheets/d/1HJ723_Ogkmu6DHP5rk5k0lYIcjl0OEtLpUuBsLs4hm0/edit#gid=16405556)
 ## 요구사항 명세서
 ![image](https://github.com/beyond-sw-camp/be05-2nd-1team-BBABAP/assets/155924495/7ece42c9-52a6-4784-a73b-a5c5c24b9a11)
+[요구사항 명세서](https://docs.google.com/spreadsheets/d/1HJ723_Ogkmu6DHP5rk5k0lYIcjl0OEtLpUuBsLs4hm0/edit#gid=1162915854)
 ## 테이블 명세서
 ![image](https://github.com/beyond-sw-camp/be05-2nd-1team-BBABAP/assets/155924495/1fc95f40-4c58-49bf-a9b6-3c9c0316fef2)
 ## ERD 설계도
