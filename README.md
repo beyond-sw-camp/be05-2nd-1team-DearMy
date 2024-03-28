@@ -140,10 +140,8 @@
 # 3. 프로젝트 설명
 ## 회원, 게시판, 댓글 CRUD
 ### FlowChart
-- USER / Board / Comment CRUD
+- User / Board / Comment CRUD
 <img width="1279" alt="스크린샷 2024-03-28 오전 3 16 54" src="https://github.com/beyond-sw-camp/be05-2nd-1team-BBABAP/assets/156767787/d557ecca-99f8-4b55-ae67-84f6bb78cc97">
-- Login with JWT
-![title](https://github.com/beyond-sw-camp/be05-2nd-1team-BBABAP/assets/65129708/0af30e11-d6d1-4798-85a1-8588bc67e8ac)   
 
 
 
