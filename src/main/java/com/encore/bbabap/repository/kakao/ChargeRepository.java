@@ -9,4 +9,6 @@ public interface ChargeRepository extends JpaRepository<Charge, String> {
     List<Charge> findByChargeTypeContaining(String busiName);
     List<Charge> findByChargeAddrContaining(String busiName);
     List<Charge> findByChargeNameContaining(String busiName);
+
 }
+

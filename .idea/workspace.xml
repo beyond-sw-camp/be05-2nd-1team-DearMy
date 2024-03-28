@@ -4,7 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d53b21e1-42f9-4465-afb3-b7b5ab54fc2d" name="Changes" comment="refactor : db password change" />
+    <list default="true" id="d53b21e1-42f9-4465-afb3-b7b5ab54fc2d" name="Changes" comment="refactor : db password change">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/encore/bbabap/api/kakao/ChargeRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/templates/addViewCharge.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/templates/addViewCharge.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/templates/babaplogo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/templates/listCharge.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/templates/listCharge.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/templates/mainlogo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/templates/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/encore/bbabap/repository/kakao/ChargeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/encore/bbabap/repository/kakao/ChargeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/addViewCharge.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/addViewCharge.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/babaplogo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/listCharge.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/listCharge.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/mainlogo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/register.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,8 +61,8 @@
       <list>
         <option value="JUnit5 Test Class" />
         <option value="HTML File" />
-        <option value="Class" />
         <option value="CSS File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -149,8 +167,11 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources/templates" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/encore/bbabap/service/kakao" />
+      <recent name="C:\encore\intelliJ_java_workspace\be05-2nd-1team-BbaBap\src\main\resources\static" />
+      <recent name="C:\encore\intelliJ_java_workspace\be05-2nd-1team-BbaBap\src\main\resources\statics" />
+      <recent name="C:\encore\intelliJ_java_workspace\be05-2nd-1team-BbaBap\src\main\resources\image" />
+      <recent name="C:\encore\intelliJ_java_workspace\be05-2nd-1team-BbaBap\src\main\resources" />
+      <recent name="C:\encore\intelliJ_java_workspace\be05-2nd-1team-BbaBap\src\main" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.encore.bbabap.service.user" />
@@ -249,7 +270,9 @@
       <workItem from="1711439641403" duration="3516000" />
       <workItem from="1711448257619" duration="1756000" />
       <workItem from="1711450827261" duration="2235000" />
-      <workItem from="1711498456333" duration="11571000" />
+      <workItem from="1711498456333" duration="13188000" />
+      <workItem from="1711518043695" duration="14629000" />
+      <workItem from="1711547341518" duration="10848000" />
     </task>
     <task id="LOCAL-00001" summary="test : git">
       <created>1710247503415</created>
@@ -415,6 +438,17 @@
     <MESSAGE value="refactor : user test 패키조 구조, 삭제" />
     <MESSAGE value="refactor : db password change" />
     <option name="LAST_COMMIT_MESSAGE" value="refactor : db password change" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/encore/bbabap/config/SecurityConfig.java</url>
+          <line>62</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
