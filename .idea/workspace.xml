@@ -115,6 +115,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectId" id="2daXnNNyti2ghZ6jFE6erdLf9SD" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -273,6 +276,7 @@
       <workItem from="1711498456333" duration="13188000" />
       <workItem from="1711518043695" duration="14629000" />
       <workItem from="1711547341518" duration="10848000" />
+      <workItem from="1711586041363" duration="1465000" />
     </task>
     <task id="LOCAL-00001" summary="test : git">
       <created>1710247503415</created>
