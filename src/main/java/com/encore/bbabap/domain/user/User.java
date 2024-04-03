@@ -10,10 +10,11 @@ import java.time.LocalDateTime;
 import static jakarta.persistence.GenerationType.IDENTITY;
 
 @Entity
-@NoArgsConstructor()
 @Getter
+@NoArgsConstructor
 @Table(name = "users")
 public class User {
+
 
     @Id
     @GeneratedValue(strategy = IDENTITY)
@@ -37,24 +38,25 @@ public class User {
 
     @Builder
     public User(String email, String password, String nickname, CarType carType,
-            LocalDateTime registeredAt, LocalDateTime updatedAt, Boolean deletedYn, String role) {
+                LocalDateTime registeredAt, LocalDateTime updatedAt, Boolean deletedYn, String role) {
         this.email = email;
         this.password = password;
         this.nickname = nickname;
         this.carType = carType;
         this.registeredAt = LocalDateTime.now();
-        this.updatedAt = LocalDateTime.now();
+        this.updatedAt = null;
         this.deletedYn = false;
         this.role = "ROLE_USER";
         // TODO : 기본 회원가입은 USER로 설정하고 필요시 MANAGER, ADMIN 레벨 만들어서 특정 요청에 의해서 권한을 주는 게 어떤지(의논 필요)
     }
 
-    public void updateMemberDetail(UserUpdateRequest request) {
+    public void updateMemberDetail(UserUpdateRequest request, String encodedPassword) {
         this.nickname = request.getNickname();
-        this.password = request.getPassword();
+        this.password = encodedPassword;
 //        this.carType = request.getCarType();
         this.updatedAt = LocalDateTime.now();
     }
+
     public void deleteUser() {
         this.deletedYn = true;
     }

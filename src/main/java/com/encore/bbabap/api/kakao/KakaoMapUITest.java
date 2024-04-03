@@ -11,8 +11,7 @@ public class KakaoMapUITest {
     @GetMapping(value = "/kakaomaptest")
     public String mymap(){
         System.out.println("카카오 맵 API 테스트");
-        return "address2";
-        //return "address";
+        return "chargerMap";
     }//method end
 
 }//class end

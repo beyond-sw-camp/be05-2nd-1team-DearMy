@@ -39,16 +39,17 @@ public class CommentService {
             throw new RuntimeException("User not found with email: " + userEmail);
         }
 
-        // 사용자 권한 확인: 게시물 작성자만 댓글을 작성할 수 있도록
-        if (!board.getUser().getEmail().equals(userEmail)) {
-            throw new RuntimeException("You do not have permission to add comment to this board.");
-        }
+//        // 사용자 권한 확인: 게시물 작성자만 댓글을 작성할 수 있도록
+//        if (!board.getUser().getEmail().equals(userEmail)) {
+//            throw new RuntimeException("You do not have permission to add comment to this board.");
+//        }
 
         Comment comment = Comment.builder()
                 .content(requestDTO.getContent())
                 .createdAt(LocalDateTime.now())
                 .user(user)
                 .board(board)
+                .deletedYn(false)
                 .build();
 
         Comment savedComment = commentRepository.save(comment);
@@ -71,6 +72,7 @@ public class CommentService {
         }
 
         comment.setDeletedAt(LocalDateTime.now()); // 삭제 시간 설정
+        comment.setDeletedYn(true); // 삭제 여부 설정
 
         // 실제로 데이터를 삭제하는 경우
         // commentRepository.delete(comment);
@@ -79,6 +81,8 @@ public class CommentService {
     @Transactional(readOnly = true)
     public List<CommentResponseDTO> getAllCommentsByBoardId(Long boardId) {
         List<Comment> comments = commentRepository.findAllByBoardId(boardId);
+        comments.removeIf(Comment::getDeletedYn);
+        System.out.println(comments.stream().map(this::convertToDTO).collect(Collectors.toList()));
         return comments.stream()
                 .map(this::convertToDTO)
                 .collect(Collectors.toList());

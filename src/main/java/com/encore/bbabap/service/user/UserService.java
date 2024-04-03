@@ -3,6 +3,8 @@ package com.encore.bbabap.service.user;
 import com.encore.bbabap.api.user.request.SignUpUserRequest;
 import com.encore.bbabap.api.user.request.UserUpdateRequest;
 import com.encore.bbabap.api.user.response.UserResponse;
+import com.encore.bbabap.config.SecurityUtils;
+import com.encore.bbabap.domain.board.Board;
 import com.encore.bbabap.domain.user.User;
 import com.encore.bbabap.exception.user.UserEmailDuplicateException;
 import com.encore.bbabap.exception.user.UserNotFoundException;
@@ -23,6 +25,7 @@ public class UserService {
     private final UserRepository userRepository;
     private final PasswordEncoder bCryptPasswordEncoder;
 
+
     public UserResponse signUp(SignUpUserRequest request) {
         checkExistUserEmail(request);
 
@@ -40,9 +43,11 @@ public class UserService {
     public List<UserResponse> findAll() {
         List<User> users = userRepository.findUsersByDeletedYnFalse();
 
+        users.removeIf(User::getDeletedYn);
+
         return users.stream()
                 .map(user -> new UserResponse(user.getEmail(), user.getNickname()
-                        ))
+                ))
                 .collect(Collectors.toList());
     }
 
@@ -55,7 +60,14 @@ public class UserService {
     @Transactional
     public void updateMember(Long id, UserUpdateRequest request) {
         User user = validateUser(id);
-        user.updateMemberDetail(request);
+        String userEmail = SecurityUtils.getCurrentUserEmail();
+
+        if (!user.getEmail().equals(userEmail)) {
+            throw new RuntimeException("You do not have permission to edit user to this user.");
+        }
+
+        String encodedPassword = bCryptPasswordEncoder.encode(request.getPassword());
+        user.updateMemberDetail(request, encodedPassword);
     }
 
     private void checkExistUserEmail(SignUpUserRequest request) {

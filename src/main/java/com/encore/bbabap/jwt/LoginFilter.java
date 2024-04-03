@@ -2,6 +2,7 @@ package com.encore.bbabap.jwt;
 
 import com.encore.bbabap.domain.RefreshEntity;
 import com.encore.bbabap.repository.RefreshRepository;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
@@ -37,7 +38,6 @@ public class LoginFilter extends UsernamePasswordAuthenticationFilter {
             HttpServletResponse response) throws AuthenticationException {
         String email = obtainEmail(request);
         String password = obtainPassword(request);
-
         UsernamePasswordAuthenticationToken authToken = new UsernamePasswordAuthenticationToken(
                 email, password, null);
         return authenticationManager.authenticate(authToken);

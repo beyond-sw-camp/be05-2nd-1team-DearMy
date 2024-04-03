@@ -3,36 +3,60 @@
 <head>
   <meta charset="UTF-8" />
   <title>충전소 추가하기</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<h1>충전소 추가하기</h1>
-<form method="POST" action="/addCharge">
-  <div>
-    <label>Charge ID</label>
-    <input type="text" id="chargeId" name="chargeId">
+<header>
+  <div class="logo">
+    <img src="image/logo.png" alt="Pabap Logo">
   </div>
-  <div>
-    <label>충전소 이름</label>
-    <input type="text" id="chargeName" name="chargeName">
+  <nav>
+    <ul>
+      <li><a href="/login">로그인</a></li>
+      <li><a href="/register">회원가입</a></li>
+      <li><a href="/listCharge">충전소 목록</a></li>
+      <li><a href="/addViewCharge">충전소 추가</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <div class="container">
+  <h2>충전소 추가하기</h2>
+  <form method="POST" action="/addCharge" class="charge-form">
+    <div>
+      <label for="chargeId">Charge ID</label>
+      <input type="text" id="chargeId" name="chargeId">
+    </div>
+    <div>
+      <label for="chargeName">충전소 이름</label>
+      <input type="text" id="chargeName" name="chargeName">
+    </div>
+    <div>
+      <label for="chargeAddr">충전소 주소</label>
+      <input type="text" id="chargeAddr" name="chargeAddr">
+    </div>
+    <div>
+      <label for="chargeType">충전기 타입</label>
+      <input type="text" id="chargeType" name="chargeType">
+    </div>
+    <div>
+      <label for="busiName">회사명</label>
+      <input type="text" id="busiName" name="busiName">
+    </div>
+    <div>
+      <p><br></p>
+      <input type="submit" id="addNew" value="Submit">
+    </div>
+  </form>
   </div>
-  <div>
-    <label>충전소 주소</label>
-    <input type="text" id="chargeAddr" name="chargeAddr">
+</main>
+<footer>
+  <div class="contact-info">
+    <p>문의 이메일: example@example.com</p>
+    <p>전화번호: 123-456-7890</p>
+    <p>회사 주소: 서울시 강남구 강남대로 1234번지</p>
+    <p>영업시간: 월요일 - 금요일 9:00 AM - 6:00 PM</p>
   </div>
-  <div>
-    <label>충전기 타입</label>
-    <input type="text" id="chargeType" name="chargeType">
-  </div>
-  <div>
-    <label>회사명</label>
-    <input type="text" id="busiName" name="busiName">
-  </div>
-  <div>
-    <p><br></p>
-    <input type="submit" id="addNew" value="Submit">
-  </div>
-</form>
-<p><br></p>
-<p><a href="/">Main</a></p>
+</footer>
 </body>
 </html>

@@ -2,20 +2,22 @@ package com.encore.bbabap.api.user.request;
 
 
 import jakarta.validation.constraints.Email;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 
 @Getter
+@AllArgsConstructor
 public class LoginUserRequest {
 
     @Email
-    private final String email;
+    private  String email;
 
-    private final String password;
+    private  String password;
 
-    @Builder
-    public LoginUserRequest(String email, String password) {
-        this.email = email;
-        this.password = password;
-    }
+//    @Builder
+//    public LoginUserRequest(String email, String password) {
+//        this.email = email;
+//        this.password = password;
+//    }
 }

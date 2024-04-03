@@ -4,6 +4,8 @@ import com.encore.bbabap.domain.RefreshEntity;
 import com.encore.bbabap.jwt.JWTUtil;
 import com.encore.bbabap.repository.RefreshRepository;
 import io.jsonwebtoken.ExpiredJwtException;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -17,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Date;
 
 @RestController
-@ResponseBody
+@Tag(name = "JWT 토큰 재발급", description = "JWT 토큰을 재발급 받는 API")
 public class ReissueApi {
 
     private final JWTUtil jwtUtil;
@@ -29,6 +31,7 @@ public class ReissueApi {
     }
 
     @PostMapping("/reissue")
+    @Operation(summary = "JWT 토큰 재발급", description = "JWT Access Token 및 Refresh Token을 재발급 받는 API")
     public ResponseEntity<?> reissue(HttpServletRequest request, HttpServletResponse response) {
 
         //get refresh token

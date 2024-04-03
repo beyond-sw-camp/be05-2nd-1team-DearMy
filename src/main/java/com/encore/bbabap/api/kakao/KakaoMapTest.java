@@ -1,5 +1,7 @@
 package com.encore.bbabap.api.kakao;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.BufferedReader;
@@ -13,9 +15,11 @@ import java.net.URLEncoder;
 
 @RestController
 @RequestMapping("/babap/kakao")
+@Tag(name = "Kakao 맵 API", description = "카카오 맵 API를 통해 주소 정보를 가져오는 API")
 public class KakaoMapTest {
     //입력한 주소의 json값을 가져오는 Controller.   참고 블로그 >>> https://minutemaid.tistory.com/174?category=1295581
     @RequestMapping(value = "/map", method = RequestMethod.GET, produces = "application/json;charset=UTF-8")
+    @Operation(summary = "주소 정보 가져오기", description = "입력한 주소로부터 카카오 맵 API를 통해 주소 정보를 가져옵니다.")
     //@GetMapping(value = "/map", produces = "application/json;charset=UTF-8")
     public String getKakaoApiFromAddress(@RequestParam("address")String roadFullAddr){
         System.out.println("debug >> 카카오맵 API 불러오기.");

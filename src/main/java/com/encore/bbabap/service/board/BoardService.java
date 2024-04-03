@@ -6,10 +6,13 @@ import com.encore.bbabap.api.board.response.BoardResponseDTO;
 import com.encore.bbabap.api.comment.response.CommentResponseDTO;
 import com.encore.bbabap.config.SecurityUtils;
 import com.encore.bbabap.domain.board.Board;
+import com.encore.bbabap.domain.comment.Comment;
 import com.encore.bbabap.domain.user.User;
+import com.encore.bbabap.repository.Comment.CommentRepository;
 import com.encore.bbabap.repository.board.BoardRepository;
 import com.encore.bbabap.repository.user.UserRepository;
 import lombok.RequiredArgsConstructor;
+import org.hibernate.annotations.Comments;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
@@ -26,6 +29,7 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class BoardService {
 
+    private final CommentRepository commentRepository;
     private final BoardRepository boardRepository;
     private final UserRepository userRepository;
 
@@ -61,11 +65,7 @@ public class BoardService {
     @Transactional(readOnly = true)
     public List<BoardResponseDTO> getAllBoards() {
         List<Board> boards = boardRepository.findAll();
-        for(Board board : boards){ // 삭제된 게시글 조회 x 처리
-            if (board.getDeletedYn()){
-                boards.remove(board);
-            }
-        }
+        boards.removeIf(Board::getDeletedYn);
         return boards.stream()
                 .map(this::convertToDTO)
                 .collect(Collectors.toList());
@@ -80,6 +80,12 @@ public class BoardService {
         else if(board==null) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Board not found with id: " + id); // 없는 게시물인 경우
         }
+
+        List<Comment> comments = commentRepository.findAllByBoardId(id);
+        comments.removeIf(Comment::getDeletedYn);
+
+        board.setComments(comments);
+
         return convertToDTO(board); // 해당 게시물이 있는 경우
     }
 
@@ -97,6 +103,12 @@ public class BoardService {
 
         Board board = boardRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Board not found with id: " + id));
+        if (board != null && board.getDeletedYn()) { // 삭제된 게시물인 경우
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Board with id " + id + " is deleted"); // 삭제된 게시물인 경우
+        }
+        else if(board==null) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Board not found with id: " + id); // 없는 게시물인 경우
+        }
 
         // 현재 사용자의 이메일 가져오기
         String currentUserEmail = SecurityUtils.getCurrentUserEmail();

@@ -5,7 +5,7 @@ import lombok.Builder;
 import lombok.Getter;
 
 @Getter
-@Builder
+//@Builder
 public class UserUpdateRequest {
 
 
